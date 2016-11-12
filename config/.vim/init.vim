@@ -1,0 +1,1 @@
+/Users/akito/dotfiles/config/.vimrc

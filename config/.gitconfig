@@ -1,0 +1,45 @@
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+[user]
+  name = Akito Kasai
+  email = a.kasai415@gmail.com
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+[core]
+  excludesfile = ~/dotfiles/.gitignore
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+  default = simple
+[alias]
+  # 使用頻度高いやつ
+  a = add
+  o = checkout
+  c = commit
+  p = push
+  # 基本的なやつ
+  st = status
+  pl = pull
+  ft = fetch
+  mr = merge
+  rb = rebase
+  # diff
+  dw = diff --color-words # 単語にも色つける
+  dc = diff --staged      # add との差分
+  # branch
+  br = branch
+  bm = branch --merged    # merge済みの branch を表示
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[diff]
+  compactionHeuristic = true

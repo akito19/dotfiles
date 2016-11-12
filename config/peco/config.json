@@ -1,0 +1,18 @@
+{
+  "CustomFilter": {
+    "Migemo": {
+      "Cmd": "migemogrep",
+      "BufferThreshold": 10000
+    }
+  },
+  "keymap": {
+      "C-a": "peco.BeginningOfLine",
+      "C-b": "peco.ScrollPageUp",
+      "C-d": "peco.DeleteForwardChar",
+      "C-e": "peco.EndOfLine",
+      "C-f": "peco.ScrollPageDown",
+      "C-j": "peco.SelectDown",
+      "C-k": "peco.SelectUp",
+      "Esc": "peco.Cancel"
+  }
+}

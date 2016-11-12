@@ -1,0 +1,34 @@
+" タイトル文字列
+set titlestring=Firefox
+
+" h,lに前のタブ,次のタブを割り当てる
+map h <C-PageUp>
+map l <C-PageDown>
+
+" H/Lに左右を割り当てる
+map H <Left>
+map L <Right>
+
+" Ctrl+h/Ctrl+lに戻る/進むを割り当てる
+map <C-h> <A-Left>
+map <C-l> <A-Right>
+
+" j,kによる上下スクロールの移動量を5倍に設定
+noremap j 5<C-e>
+noremap k 5<C-y>
+
+" デフォルトの検索エンジン
+set defsearch=google
+
+" sでぐぐる
+nnoremap s :tabopen<Space>google<Space>
+
+" 選択文字列でぐぐる(マウスとVISUALモードの選択時に対応)
+nmap S <C-c>:tabopen<Space>google<Space><C-v><CR>
+vmap S <C-c><Esc><Esc>:tabopen<Space>google<Space><C-v><CR>
+
+" pは文字列によってURLと判断されて誤爆するので明示的にGoogle検索を指定する
+nnoremap p :tabopen<Space>google<Space><C-v><CR>
+
+" 自動補完の候補
+set complete=sl

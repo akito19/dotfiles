@@ -1,0 +1,17 @@
+#
+# Configuration Linux
+#
+
+# aliases for Linux
+alias vi="vim"
+alias ls='ls -F --color=auto'
+
+
+export LANG=en_US.UTF-8
+
+MANPATH=/usr/local/man:$MANPATH
+
+# rbenv
+export RBENV_ROOT="/usr/local/rbenv"
+export PATH="${RBENV_ROOT}/bin:${PATH}"
+eval "$(rbenv init -)"

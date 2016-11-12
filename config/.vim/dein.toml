@@ -1,0 +1,107 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+  [plugins.build]
+    mac   = 'make'
+    linux = 'make'
+    unix  = 'gmake'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+# ruby, rails
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+[[plugins]]
+repo = 'alpaca-tc/alpaca_tags'
+
+[[plugins]]
+repo = 'basyura/unite-rails'
+
+# elixir
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
+on_ft = 'elixir'
+
+[[plugins]]
+repo = 'mattreduce/vim-mix'
+on_ft = 'elixir'
+
+# golang
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+
+# front-end
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = 'coffee'
+
+[[plugins]]
+repo = 'cakebaker/scss-syntax.vim'
+
+[[plugins]]
+repo = 'lilydjwg/colorizer'
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = 'slim'
+
+# 補完
+[[plugins]]
+repo = 'Shougo/neosnippet'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+# status line
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+# color scheme
+[[plugins]]
+repo = 'jeffreyiacono/vim-colors-wombat'
+
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+# others
+[[plugins]]
+repo = 'Toruiwashita/git-switcher.vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'terryma/vim-multiple-cursors'
+
+# 表示
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = "jiangmiao/auto-pairs"
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
