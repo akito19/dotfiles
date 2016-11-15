@@ -3,6 +3,7 @@ node.reverse_merge!(
     user: 'akito',
     global: '2.3.1',
     versions: %w[
+      2.3.2
       2.3.1
       2.3.0
     ],
