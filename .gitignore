@@ -28,4 +28,4 @@ dump.rdb
 *.app
 
 # others
-bin/mitamae*
+/bin/mitamae*
