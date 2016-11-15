@@ -1,4 +1,8 @@
-package 'vim'
+define :vim, options: '--with-lua --with-luajit' do
+  package 'vim' do
+    options params[:options]
+  end
+end
 
 ln '.vim'
 ln '.vimrc'
