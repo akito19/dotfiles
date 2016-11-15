@@ -1,4 +1,4 @@
-include_cookbook 'symbolicfiles'
+include_cookbook 'symboliclinks'
 include_cookbook 'vim'
 include_cookbook 'git'
 include_cookbook 'zsh'
