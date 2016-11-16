@@ -5,5 +5,6 @@ include_cookbook 'zsh'
 include_cookbook 'ruby'
 
 ln '.vimperatorrc'
+ln '.tmux.conf'
 ln 'bin'
 ln 'peco'
