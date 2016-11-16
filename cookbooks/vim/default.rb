@@ -14,12 +14,12 @@ directory "#{ENV['HOME']}/.config/nvim" do
 end
 
 # http://qiita.com/okamos/items/2259d5c770d51b88d75b
-link "#{ENV['HOME']}/.vim" do
-  to "#{ENV['HOME']}/.config/nvim"
+link "#{ENV['HOME']}/.config/nvim" do
+  to "#{ENV['HOME']}/.vim"
   force true
 end
 
-link "#{ENV['HOME']}/.vimrc" do
-  to "#{ENV['HOME']}/.config/nvim/init.vim"
+link "#{ENV['HOME']}/.config/nvim/init.vim" do
+  to "#{ENV['HOME']}/.vimrc"
   force true
 end
