@@ -7,6 +7,3 @@ git "#{zplug_home}" do
 end
 
 ln '.zshrc'
-#command "#{zplug_home}/init.zsh" do
-#  execute "source #{zplug_home}/init.zsh"
-#end
