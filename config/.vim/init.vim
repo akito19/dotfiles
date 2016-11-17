@@ -1,1 +1,1 @@
-/Users/akito/dotfiles/config/.vimrc
+/Users/akito/.vimrc

@@ -10,13 +10,8 @@ plugins=(git ruby gem osx bundler brew rails)
 #
 
 # zplug があるかどうかチェック
-export ZPLUG_HOME=${HOME}/dotfiles/config/.zplug
-
-if [[ ! -d ~/.zplug ]]; then
-  curl -sL zplug.sh/installer | zsh
-fi
-
-source ~/dotfiles/config/.zplug/init.zsh
+export ZPLUG_HOME=${HOME}/.zplug
+source ${ZPLUG_HOME}/init.zsh
 
 # write "user_name/repository"
 zplug "zsh-users/zsh-syntax-highlighting"
