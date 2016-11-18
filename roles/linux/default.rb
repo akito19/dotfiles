@@ -5,5 +5,6 @@ include_cookbook 'zsh'
 include_cookbook 'ruby'
 
 ln '.vimperatorrc'
+ln '.bash_profile'
 ln 'bin'
 ln 'peco'

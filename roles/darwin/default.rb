@@ -6,5 +6,6 @@ include_cookbook 'ruby'
 
 ln '.vimperatorrc'
 ln '.tmux.conf'
+ln '.bash_profile'
 ln 'bin'
 ln 'peco'
