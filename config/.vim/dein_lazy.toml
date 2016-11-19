@@ -10,6 +10,11 @@ depends = 'neomru.vim'
 repo = 'ujihisa/unite-colorscheme'
 on_source = 'unite.vim'
 
+# NeoVim
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+if = 'has("nvim")'
+
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 if = 'has("nvim")'
