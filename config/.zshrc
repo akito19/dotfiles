@@ -9,7 +9,6 @@ plugins=(git ruby gem osx bundler brew rails)
 # Plugins -zplug-
 #
 
-# zplug があるかどうかチェック
 export ZPLUG_HOME=${HOME}/.zplug
 source ${ZPLUG_HOME}/init.zsh
 
