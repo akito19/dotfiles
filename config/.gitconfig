@@ -39,6 +39,8 @@
   bm = branch --merged    # merge済みの branch を表示
   # stash
   stash = stash -u        # untracked なファイルも stash
+  # push
+  pf = push --force-with-lease
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
