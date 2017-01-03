@@ -1,6 +1,6 @@
-# !bin/sh
+#!/bin/sh
 set -e
 
-./bin/setup_mitamae
+bin/setup_mitamae
 
-./bin/mitamae local bootstrap.rb
+bin/mitamae local bootstrap.rb
