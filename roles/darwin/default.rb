@@ -8,4 +8,5 @@ ln '.vimperatorrc'
 ln '.tmux.conf'
 ln '.bash_profile'
 ln 'bin'
-ln 'peco'
+# TODO: peco を自動インストールするようにしてから
+# ln 'peco'
