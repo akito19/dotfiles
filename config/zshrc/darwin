@@ -43,11 +43,6 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 # added by Anaconda3 2.3.0 installer
 export PATH="//anaconda/bin:$PATH"
 
-# golang
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME/git/golang
-export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin
-
 # configuration peco
 function peco-select-history() {
     local tac

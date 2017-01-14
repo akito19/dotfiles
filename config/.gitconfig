@@ -47,3 +47,6 @@
   required = true
 [diff]
   compactionHeuristic = true
+[ghq]
+  root = ~/ghq
+  root = ~/go/src
