@@ -88,6 +88,19 @@ setopt EXTENDED_HISTORY
 typeset -U path PATH
 
 #
+# Languages
+#
+
+# rbenv
+export RBENV_ROOT="$HOME/.rbenv"
+export PATH="RBENV_ROOT/bin:$PATH"
+eval "$(rbenv init -)"
+
+# golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+#
 # Aliases
 #
 
