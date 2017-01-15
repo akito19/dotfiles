@@ -1,0 +1,64 @@
+#
+# Configuration Darwin
+#
+
+export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# aliases for MacOS X
+alias v='nvim'
+alias ls='ls -G -F'
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+export DATABASEDOTCOM_VERIFY_MODE=OpenSSL::SSL::VERIFY_NONE
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export AWS_ACCESS_KEY="ã<81><82>ã<81><8f>ã<81><9b>ã<81><99>ã<81><8d>ã<83>¼"
+export AWS_SECRET_KEY="ã<81><97>ã<83>¼ã<81><8f>ã<82><8c>ã<81>£ã<81>¨ã<81><8d>ã<83>¼"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
+export EC2_URL=https://ec2.ap-northeast-1.amazonaws.com
+export EC2_REGION=ap-northeast-1
+
+# PostgreSQL configuration
+export PGDATA=/usr/local/var/postgres
+
+# pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
+export PATH="$PYENV_ROOT/bin:$PATH"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# added by Anaconda3 2.3.0 installer
+export PATH="//anaconda/bin:$PATH"
+
+# configuration peco
+function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(\history -n 1 | \
+        eval $tac | \
+        peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+
+# peco + MigemoGrep
+# http://qiita.com/mamoru0217/items/00c0bae2a636750b0e09
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
+show_open_issues_on_web() {
+  ghi show -w $(ghi list --filter 'all'| peco)
+}
+alias si=show_open_issues_on_web

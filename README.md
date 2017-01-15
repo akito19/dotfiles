@@ -1,6 +1,11 @@
 # My dotfiles based on MItamae
 
-# How to use
+## Instalation on a new maschine via `curl`
+```
+$ curl -L https://raw.githubusercontent.com/akito19/dotfiles/master/install.sh | bash
+```
+
+## How to use
 ```
 $ git clone git@github.com:akito19/dotfiles.git
 $ cd dotfiles
