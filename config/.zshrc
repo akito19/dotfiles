@@ -93,7 +93,7 @@ typeset -U path PATH
 
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
-export PATH="RBENV_ROOT/bin:$PATH"
+export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 
 # golang
