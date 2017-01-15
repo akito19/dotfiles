@@ -94,44 +94,26 @@ typeset -U path PATH
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
 export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-#
-# Aliases
-#
-
-# general aliases
-alias g='git'
-alias la='ls -a -G' ll='ls -la -G'
-alias zshconfig="mate ~/dotfiles/config/.zshrc"
-alias grep="grep --color"
-alias relogin='exec $SHELL -l'
-alias -s html='pick-web-browser'
-alias web='pick-web-browser'
-
-# rails aliases
-alias ralis='rails'
-alias rials='rails'
-alias be='bundle exec'
-alias bi='bundle install'
-
-ZSH_SRC='dotfiles/config/zshrc'
-# zstyle読み込み
-if [ -f ${HOME}/${ZSH_SRC}/zstyle ]; then
-  source ${HOME}/${ZSH_SRC}/zstyle
+DOTFILE_ROOT=$HOME/dotfiles/config
+if [ -d $DOTFILE_ROOT/zsh.d ]; then
+  for file in $DOTFILE_ROOT/zsh.d/*; do
+    source $file
+  done
 fi
 
 case "${OSTYPE}" in
 # MacOSX
   darwin*)
-    [ -f ${HOME}/${ZSH_SRC}/darwin ] && source ${HOME}/${ZSH_SRC}/darwin
+    [ -f $DOTFILE_ROOT/zshrc.d/zshrc.darwin ] && source $DOTFILE_ROOT/zshrc.d/zshrc.darwin
     ;;
 # Linux
   linux*)
-    [ -f ${HOME}/${ZSH_SRC}/linux ] && source ${HOME}/${ZSH_SRC}/linux
+    [ -f $DOTFILE_ROOT/zshrc.d/zshrc.linux ] && source $DOTFILE_ROOT/zshrc.d/zshrc.linux
     ;;
 esac
