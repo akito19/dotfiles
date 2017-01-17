@@ -29,7 +29,6 @@ if ! zplug check --verbose; then
     fi
 fi
 
-# プラグインを読み込み、コマンドにパスを通す
 zplug load
 
 #
@@ -84,7 +83,7 @@ export GIT_EDITOR=vim
 export GIT_MERGE_AUTOEDIT=no
 export HOMEBEW_CASK_OPTS="--appdir=/Applications"
 
-export HISTFILE=${HOME}/.zsh_history
+export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=100000
 setopt hist_ignore_dups
@@ -96,8 +95,8 @@ typeset -U path PATH
 #
 
 # rbenv
-export RBENV_ROOT="$HOME/.rbenv"
-export PATH="$RBENV_ROOT/bin:$PATH"
+export RBENV_ROOT=$HOME/.rbenv
+export PATH=$RBENV_ROOT/bin:$PATH
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # golang
@@ -111,7 +110,7 @@ if [ -d $DOTFILE_ROOT/zsh.d ]; then
   done
 fi
 
-case "${OSTYPE}" in
+case $OSTYPE in
 # MacOSX
   darwin*)
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.darwin ] && source $DOTFILE_ROOT/zshrc.d/zshrc.darwin
