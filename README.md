@@ -1,6 +1,6 @@
 # My dotfiles based on MItamae
 
-## Instalation on a new maschine via `curl`
+## Installation on a new maschine via `curl`
 ```
 $ curl -L https://raw.githubusercontent.com/akito19/dotfiles/master/install.sh | bash
 ```
