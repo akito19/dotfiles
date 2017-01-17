@@ -9,8 +9,12 @@ plugins=(git ruby gem osx bundler brew rails)
 # Plugins -zplug-
 #
 
-export ZPLUG_HOME=${HOME}/.zplug
-source ${ZPLUG_HOME}/init.zsh
+if [[ ! -d ~/.zplug ]]; then
+  git clone https://github.com/zplug/zplug ~/.zplug
+  source ~/.zplug/init.zsh && zplug update --self
+fi
+
+source ~/.zplug/init.zsh
 
 # write "user_name/repository"
 zplug "zsh-users/zsh-syntax-highlighting"
@@ -26,7 +30,7 @@ if ! zplug check --verbose; then
 fi
 
 # プラグインを読み込み、コマンドにパスを通す
-zplug load --verbose
+zplug load
 
 #
 # Prompt
