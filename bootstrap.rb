@@ -8,6 +8,22 @@ MItamae::RecipeContext.class_eval do
     root_dir = File.expand_path('..', __FILE__)
     include_recipe File.join(root_dir, 'roles', name, 'default')
   end
+
+  def ask(params)
+    puts "Do you #{params}? [y/n]"
+    loop do
+      answer = gets.chomp.to_s
+      case answer
+      when 'y'
+        return true
+      when 'n'
+        return false
+      else
+        puts "Try again because you input incorrect letter. Do you #{params}? [y/n]"
+        redo
+      end
+    end
+  end
 end
 
 include_role node[:platform]
