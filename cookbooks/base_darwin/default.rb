@@ -3,5 +3,5 @@ execute "xcode lisence" do
 end
 
 execute "install Homebrew" do
-  command 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+  command 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew doctor'
 end
