@@ -3,7 +3,7 @@ execute "xcode lisence" do
 end
 
 homebrew_cmd = <<-EOS
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" &&
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew doctor
 EOS
 
