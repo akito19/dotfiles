@@ -14,7 +14,7 @@ MItamae::RecipeContext.class_eval do
     loop do
       answer = gets.chomp.to_s
       case answer
-      when 'y'
+      when 'y', 'yes'
         return true
       when 'n'
         return false
