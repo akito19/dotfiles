@@ -1,12 +1,8 @@
-execute "xcode lisence" do
-  command "xcode-select --install"
-end
-
-homebrew_cmd = <<-EOS
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew doctor
-EOS
+# TODO: あとから外にシェルとして切り出す
+# execute "xcode lisence" do
+#   command "xcode-select --install"
+# end
 
 execute "install Homebrew" do
-  command homebrew_cmd
+  command '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 end
