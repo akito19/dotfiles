@@ -1,7 +1,3 @@
-if ask('set up Xcode and Homebrew')
-  include_cookbook 'base_darwin'
-end
-
 include_cookbook 'symboliclinks'
 include_cookbook 'git'
 include_cookbook 'vim'
@@ -18,4 +14,3 @@ end
 
 ln '.bash_profile'
 ln '.vimperatorrc'
-ln 'bin'
