@@ -16,3 +16,12 @@ $ ./install.sh
 ```
 
 ref: [MItamae](https://github.com/k0kubun/mitamae)
+
+## Memo
+If you want to chenge `origin` of repository, you should execute follow command.
+e.g. Changing `SSH` from `https`
+
+```
+$ git remote -v  // confirmation current origin
+$ git remote set-url origin git@github.com:akito19/dotfiles.git
+```
