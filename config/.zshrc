@@ -111,11 +111,9 @@ if [ -d $DOTFILE_ROOT/zsh.d ]; then
 fi
 
 case $OSTYPE in
-# MacOSX
   darwin*)
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.darwin ] && source $DOTFILE_ROOT/zshrc.d/zshrc.darwin
     ;;
-# Linux
   linux*)
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.linux ] && source $DOTFILE_ROOT/zshrc.d/zshrc.linux
     ;;

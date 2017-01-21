@@ -1,14 +1,17 @@
 # My dotfiles based on MItamae
 
-## Installation on a new maschine via `curl`
+## Installation
+If you use macOS, you can execute follow command:
+
 ```
-$ curl -L https://raw.githubusercontent.com/akito19/dotfiles/master/install.sh | bash
+$ curl -L https://raw.githubusercontent.com/akito19/dotfiles/master/init.sh | bash
 ```
 
-## How to use
+## Manual Installation
 ```
 $ git clone git@github.com:akito19/dotfiles.git
 $ cd dotfiles
+$ ./init.sh
 $ ./install.sh
 ```
 
