@@ -7,8 +7,8 @@ is_setup() {
   do
     read -r answer
     case $answer in
-      'yes' | 'y')   return 0 ;;
-      [nN]o | 'N')   return 1 ;;
+      'yes' | 'y') return 0 ;;
+      [nN]o | 'N') return 1 ;;
       *) echo "Try again because you input incorrect letter. Do you setup $1? [y/N]" ;;
     esac
   done
@@ -24,7 +24,7 @@ if is_setup 'Homebrew'; then
 fi
 
 if [ ! -d $HOME/dotfiles ]; then
-  git clone https://github.com/akito19/dotfiles.git
+  git clone https://github.com/akito19/dotfiles.git ~/dotfiles
 fi
 
 $HOME/dotfiles/install.sh
