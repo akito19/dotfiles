@@ -5,7 +5,7 @@ is_setup() {
   echo "Do you setup $1? [y/N]"
   while :
   do
-    read -r -t 30 answer
+    read -r answer
     case $answer in
       'yes' | 'y') return 0 ;;
       [nN]o | 'N') return 1 ;;

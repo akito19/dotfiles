@@ -4,8 +4,10 @@
 If you use macOS, you can execute follow command:
 
 ```
-$ curl -L https://raw.githubusercontent.com/akito19/dotfiles/master/init.sh | bash
+$ curl -sfSL https://raw.githubusercontent.com/akito19/dotfiles/master/init.sh | sh
 ```
+
+無限ループに陥る。。
 
 ## Manual Installation
 ```
