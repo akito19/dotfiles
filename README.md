@@ -17,8 +17,6 @@ $ cd dotfiles
 $ ./init.sh
 ```
 
-ref: [MItamae](https://github.com/k0kubun/mitamae)
-
 ## Memo
 If you want to chenge `origin` of repository, you should execute follow command.
 e.g. Changing `SSH` from `https`
