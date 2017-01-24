@@ -2,7 +2,7 @@
 set -e
 
 is_setup() {
-  echo "Do you setup $1? [y/N]"
+  echo -n "Do you setup $1? [y/N]"
   while :
   do
     read -r answer
