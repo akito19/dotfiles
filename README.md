@@ -1,4 +1,5 @@
-# My dotfiles based on MItamae
+# My Dotfiles Based on MItamae
+[MItamae](https://github.com/k0kubun/mitamae) is a configuration management tool.
 
 ## Installation
 If you use macOS, you can execute follow command:
@@ -11,10 +12,9 @@ $ curl -sfSL https://raw.githubusercontent.com/akito19/dotfiles/master/init.sh |
 
 ## Manual Installation
 ```
-$ git clone git@github.com:akito19/dotfiles.git
+$ git clone https://github.com/akito19/dotfiles.git
 $ cd dotfiles
 $ ./init.sh
-$ ./install.sh
 ```
 
 ref: [MItamae](https://github.com/k0kubun/mitamae)
