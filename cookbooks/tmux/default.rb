@@ -1,4 +1,5 @@
 package 'tmux'
+package 'reattach-to-user-namespace'
 
 scripts = [
   "~/dotfiles/config/bin/battery",

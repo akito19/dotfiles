@@ -1,16 +1,17 @@
 include_cookbook 'symboliclinks'
 include_cookbook 'git'
 include_cookbook 'vim'
-include_cookbook 'zsh'
-include_cookbook 'tmux'
 
-if ask('install ruby')
+if ask 'install Ruby'
   include_cookbook 'ruby'
 end
 
-if ask('install golang')
+if ask 'install Golang'
   include_cookbook 'golang'
 end
 
 ln '.bash_profile'
 ln '.vimperatorrc'
+
+include_cookbook 'tmux'
+include_cookbook 'zsh'
