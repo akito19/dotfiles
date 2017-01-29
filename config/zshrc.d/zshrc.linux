@@ -3,9 +3,7 @@
 #
 
 # aliases for Linux
-alias vi="vim"
-alias ls='ls -F --color=auto'
-
+alias v="vim"
 
 export LANG=en_US.UTF-8
 

@@ -1,7 +1,7 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
 
 # configuration umask
-# umask 002
+umask 022
 
 plugins=(git ruby gem osx bundler brew rails)
 
