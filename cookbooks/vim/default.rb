@@ -11,7 +11,6 @@ end
 ln '.vim'
 ln '.vimrc'
 
-# TODO: NeoVimのインストールもできるようにする
 directory "#{ENV['HOME']}/.config/nvim" do
   action :create
   not_if "test -d #{ENV['HOME']}/.config/nvim"
