@@ -127,7 +127,6 @@ autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
 
 " indentLine 設定
 let g:loaded_indentLine = 1
-" let g:indentLine_color_term = 239
 let g:indentLine_char = '¦'
 let g:indentLine_enabled = 1
 
@@ -155,12 +154,6 @@ au WinEnter * let w:m1 = matchadd("WhitespaceEOL", ' +$')
 " 検索設定
 set wrapscan
 set hlsearch    " 検索結果をハイライト表示する
-
-" auto-ctags 設定
-let g:auto_ctags = 1
-let g:auto_ctags_directory_list = ['.git']
-let g:auto_ctags_tags_name = 'tags'
-set tags+=.git/tags
 
 " https://github.com/itchyny/lightline.vim
 """"""""""""""""""""""""""""""
