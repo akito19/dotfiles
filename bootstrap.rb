@@ -10,16 +10,16 @@ MItamae::RecipeContext.class_eval do
   end
 
   def ask(params)
-    puts "Do you #{params}? [y/n]"
+    puts "Do you #{params}? [y/N]"
     loop do
       answer = gets.chomp.to_s
       case answer
       when 'y', 'yes'
         return true
-      when 'n'
+      when 'N', 'no'
         return false
       else
-        puts "Try again because you input incorrect letter. Do you #{params}? [y/n]"
+        puts "Try again because you input incorrect letter. Do you #{params}? [y/N]"
         redo
       end
     end
