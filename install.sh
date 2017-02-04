@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
 
-bin/setup_mitamae
+~/dotfiles/bin/setup_mitamae
 
-bin/mitamae local bootstrap.rb
+~/dotfiles/bin/mitamae local ~/dotfiles/bootstrap.rb

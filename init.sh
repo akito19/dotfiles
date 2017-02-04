@@ -27,5 +27,4 @@ if [ ! -d $HOME/dotfiles ]; then
   git clone https://github.com/akito19/dotfiles.git ~/dotfiles
 fi
 
-cd ~/dotfiles
-./install.sh
+./dotfiles/install.sh
