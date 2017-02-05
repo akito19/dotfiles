@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 is_setup() {
@@ -9,7 +9,7 @@ is_setup() {
     case $answer in
       'yes' | 'y') return 0 ;;
       [nN]o | 'N') return 1 ;;
-      *) echo -n "Try again because you input incorrect letter. Do you setup $1? [y/N]" ;;
+      *) echo "Try again because you input incorrect letter. Do you setup $1? [y/N]" ;;
     esac
   done
 }
