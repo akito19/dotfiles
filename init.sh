@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 is_setup() {
   echo "Do you setup $1? [y/N]"
   while :
   do
-    read -r answer
+    read -r -p answer
     case $answer in
       'yes' | 'y') return 0 ;;
       [nN]o | 'N') return 1 ;;
@@ -27,4 +27,4 @@ if [ ! -d $HOME/dotfiles ]; then
   git clone https://github.com/akito19/dotfiles.git ~/dotfiles
 fi
 
-./dotfiles/install.sh
+~/dotfiles/install.sh
