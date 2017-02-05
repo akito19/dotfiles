@@ -1,11 +1,12 @@
-if node[:platform] == 'darwin'
-  package 'neovim/neovim/neovim'
-end
-
 define :vim, options: '--with-lua --with-luajit' do
   package 'vim' do
     options params[:options]
   end
+end
+
+if node[:platform] == 'darwin'
+  package 'neovim/neovim/neovim'
+  package 'ctags'
 end
 
 ln '.vim'
