@@ -3,15 +3,15 @@ set -e
 
 is_setup() {
   echo "Do you setup $1? [y/N]"
-  read -r answer
-  case $answer in
-    'yes' | 'y') return 0 ;;
-    [nN]o | 'N') return 1 ;;
-    *)
-      echo "Try again because you input incorrect letter. Do you setup $1? [y/N]"
-      is_setup
-      ;;
-  esac
+  while :
+  do
+    read -r answer
+    case $answer in
+      'yes' | 'y') return 0 ;;
+      [nN]o | 'N') return 1 ;;
+      *) echo "Try again because you input incorrect letter. Do you setup $1? [y/N]" ;;
+    esac
+  done
 }
 
 if is_setup 'Xcode Command Line Tools'; then
