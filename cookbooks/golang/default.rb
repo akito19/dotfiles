@@ -18,4 +18,4 @@ directory "#{ENV['HOME']}/ghq/github.com/akito19" do
   not_if "test -d #{ENV['HOME']}/ghq/github.com/akito19"
 end
 
-ln 'peco'
+ln '.peco'
