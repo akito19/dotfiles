@@ -9,8 +9,8 @@ if node[:platform] == 'darwin'
   package 'ctags'
 end
 
-ln '.vim'
-ln '.vimrc'
+ln 'vim'
+ln 'vimrc'
 
 directory "#{ENV['HOME']}/.config/nvim" do
   action :create
