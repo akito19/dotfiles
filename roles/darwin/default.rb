@@ -10,8 +10,8 @@ if ask 'install Golang'
   include_cookbook 'golang'
 end
 
-ln '.bash_profile'
-ln '.vimperatorrc'
+ln 'bash_profile'
+ln 'vimperatorrc'
 
 include_cookbook 'tmux'
 include_cookbook 'zsh'
