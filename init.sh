@@ -3,13 +3,13 @@ set -e
 
 is_setup() {
   echo "Do you setup $1? [y/N]"
-  while :
+  while true
   do
     read -r answer
     case $answer in
       'yes' | 'y') return 0 ;;
       [nN]o | 'N') return 1 ;;
-      *) echo "Try again because you input incorrect letter. Do you setup $1? [y/N]" ;;
+      *) echo "Try again because you input incorrect letter. Do you setup $1? [y/N]"
     esac
   done
 }
