@@ -18,4 +18,9 @@ directory "#{ENV['HOME']}/ghq/github.com/akito19" do
   not_if "test -d #{ENV['HOME']}/ghq/github.com/akito19"
 end
 
+execute "go get hub" do
+  command "go get github.com/github/hub"
+  not_if "test -d #{ENV['HOME']}/go/src/github.com/github/hub"
+end
+
 ln 'peco'
