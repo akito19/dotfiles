@@ -4,7 +4,6 @@ node.reverse_merge!(
     global: '2.4.0',
     versions: %w[
       2.4.0
-      2.3.3
     ],
   }
 )
