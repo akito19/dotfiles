@@ -45,7 +45,8 @@ endif
 
 " カラースキーマデフォルト
 syntax enable
-colorscheme iceberg
+set bg=dark
+colorscheme kalisi
 
 " 基本設定
 set noswapfile  " .swpを生成しない

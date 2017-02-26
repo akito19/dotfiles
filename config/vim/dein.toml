@@ -74,13 +74,10 @@ repo = 'itchyny/lightline.vim'
 
 # color scheme
 [[plugins]]
-repo = 'jeffreyiacono/vim-colors-wombat'
-
-[[plugins]]
-repo = 'nanotech/jellybeans.vim'
-
-[[plugins]]
 repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'freeo/vim-kalisi'
 
 # others
 [[plugins]]
