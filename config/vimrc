@@ -45,9 +45,7 @@ endif
 
 " カラースキーマデフォルト
 syntax enable
-set bg=dark
-let g:seoul256_background = 234
-colorscheme seoul256
+colorscheme iceberg
 
 " 基本設定
 set noswapfile  " .swpを生成しない
@@ -162,7 +160,7 @@ set hlsearch    " 検索結果をハイライト表示する
 " lightline.vim 設定諸々
 """"""""""""""""""""""""""""""
 let g:lightline = {
-        \ 'colorscheme': 'wombat',
+        \ 'colorscheme': 'iceberg',
         \ 'mode_map': {'c': 'NORMAL'},
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
