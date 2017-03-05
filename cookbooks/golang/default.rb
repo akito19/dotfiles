@@ -23,4 +23,4 @@ execute "go get hub" do
   not_if "test -d #{ENV['HOME']}/go/src/github.com/github/hub"
 end
 
-ln 'peco'
+ln '.peco'

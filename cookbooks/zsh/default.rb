@@ -13,7 +13,7 @@ if node[:platform] == 'darwin'
   end
 end
 
-ln 'zshrc'
+ln '.zshrc'
 
 execute 'exec zsh' do
   command 'exec zsh'

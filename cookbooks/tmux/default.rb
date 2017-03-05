@@ -12,4 +12,4 @@ scripts.each do |script|
   end
 end
 
-ln 'tmux.conf'
+ln '.tmux.conf'
