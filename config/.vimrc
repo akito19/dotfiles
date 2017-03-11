@@ -160,7 +160,7 @@ set hlsearch    " 検索結果をハイライト表示する
 " lightline.vim 設定諸々
 """"""""""""""""""""""""""""""
 let g:lightline = {
-        \ 'colorscheme': 'iceberg',
+        \ 'colorscheme': 'wombat',
         \ 'mode_map': {'c': 'NORMAL'},
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]

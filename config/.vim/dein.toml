@@ -87,6 +87,9 @@ repo = 'junegunn/seoul256.vim'
 repo = 'Toruiwashita/git-switcher.vim'
 
 [[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
