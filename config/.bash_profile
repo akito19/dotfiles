@@ -10,15 +10,8 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
-
-GIT_PS1_SHOWDIRTYSTATE=TRUE
-export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
-
-
 export DATABASEDOTCOM_VERIFY_MODE=OpenSSL::SSL::VERIFY_NONE
-export JAVA_HOME="$(/usr/libexec/java_home)"
-export AWS_ACCESS_KEY="ãããããã¼"
-export AWS_SECRET_KEY="ãã¼ããã£ã¨ãã¼"
+# export JAVA_HOME="$(/usr/libexec/java_home)"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
 export EC2_URL=https://ec2.ap-northeast-1.amazonaws.com
 export EC2_REGION=ap-northeast-1
