@@ -23,6 +23,17 @@ link "#{ENV['HOME']}/.config/nvim" do
   force true
 end
 
+# https://neovim.io/doc/user/filetype.html
+directory "#{ENV['HOME']}/.config/nvim/after" do
+  action :create
+  not_if "test -d #{ENV['HOME']}/.config/nvim/after"
+end
+
+link "#{ENV['HOME']}/.config/nvim/after/ftplugin" do
+  to "#{ENV['HOME']}/.vim/after/ftplugin"
+  force true
+end
+
 link "#{ENV['HOME']}/.config/nvim/init.vim" do
   to "#{ENV['HOME']}/.vimrc"
   force true
