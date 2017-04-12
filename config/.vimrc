@@ -43,6 +43,8 @@ if dein#check_install()
   call dein#install()
 endif
 
+filetype plugin indent on
+
 " カラースキーマデフォルト
 syntax enable
 colorscheme iceberg
@@ -69,12 +71,11 @@ set ambiwidth=double
 set laststatus=2
 
 " File type
-autocmd BufRead,BufNewFile *.rb setfiletype ruby
-autocmd BufRead,BufNewFile *.py setfiletype python
-autocmd BufRead,BufNewFile *.go setfiletype go
-autocmd BufRead,BufNewFile *.ex,*.exs,*.eex setfiletype elixir
-autocmd BufRead,BufNewFile *.php setfiletype php
-autocmd BufRead,BufNewFile *.swift setfiletype swift
+au BufRead,BufNewFile *.rb             set filetype=ruby
+au BufRead,BufNewFile *.go             set filetype=go
+au BufRead,BufNewFile *.ex,*.exs,*.eex set filetype=elixir
+au BufRead,BufNewFile *.py             set filetype=python
+au BufRead,BufNewFile *.php            set filetype=php
 
 " change cursor shape in different modes
 if exists('$ITERM_PROFILE')
