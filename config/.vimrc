@@ -68,6 +68,14 @@ set cursorline
 set ambiwidth=double
 set laststatus=2
 
+" File type
+autocmd BufRead,BufNewFile *.rb setfiletype ruby
+autocmd BufRead,BufNewFile *.py setfiletype python
+autocmd BufRead,BufNewFile *.go setfiletype go
+autocmd BufRead,BufNewFile *.ex,*.exs,*.eex setfiletype elixir
+autocmd BufRead,BufNewFile *.php setfiletype php
+autocmd BufRead,BufNewFile *.swift setfiletype swift
+
 " change cursor shape in different modes
 if exists('$ITERM_PROFILE')
   if exists('$TMUX')
