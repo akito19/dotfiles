@@ -12,12 +12,12 @@ end
 ln '.vim'
 ln '.vimrc'
 
+# http://qiita.com/okamos/items/2259d5c770d51b88d75b
 directory "#{ENV['HOME']}/.config/nvim" do
   action :create
   not_if "test -d #{ENV['HOME']}/.config/nvim"
 end
 
-# http://qiita.com/okamos/items/2259d5c770d51b88d75b
 link "#{ENV['HOME']}/.config/nvim" do
   to "#{ENV['HOME']}/.vim"
   force true
