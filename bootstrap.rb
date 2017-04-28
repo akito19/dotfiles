@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 MItamae::RecipeContext.class_eval do
   def include_cookbook(name)
     root_dir = File.expand_path('..', __FILE__)

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 include_cookbook 'symboliclinks'
 include_cookbook 'git'
 include_cookbook 'vim'

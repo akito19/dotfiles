@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 package 'zsh'
 
 zplug_home = "#{ENV['HOME']}/.zplug"

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 package 'tmux'
 package 'reattach-to-user-namespace'
 

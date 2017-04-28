@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 define :vim, options: '--with-lua --with-luajit' do
   package 'vim' do
     options params[:options]

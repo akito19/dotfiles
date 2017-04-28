@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 node.reverse_merge!(
   rbenv: {
     user: 'akito',
