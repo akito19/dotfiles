@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 define :ln do
   dotfile = File.join(ENV['HOME'], params[:name])
   link dotfile do
