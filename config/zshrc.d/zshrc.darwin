@@ -19,15 +19,12 @@ fi
 
 # aliases for MacOS X
 alias v='nvim'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias ls='ls -G -F'
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 export DATABASEDOTCOM_VERIFY_MODE=OpenSSL::SSL::VERIFY_NONE
 export JAVA_HOME="$(/usr/libexec/java_home)"
-export AWS_ACCESS_KEY="ã<81><82>ã<81><8f>ã<81><9b>ã<81><99>ã<81><8d>ã<83>¼"
-export AWS_SECRET_KEY="ã<81><97>ã<83>¼ã<81><8f>ã<82><8c>ã<81>£ã<81>¨ã<81><8d>ã<83>¼"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
 export EC2_URL=https://ec2.ap-northeast-1.amazonaws.com
 export EC2_REGION=ap-northeast-1
