@@ -18,6 +18,7 @@ on_ft = 'ruby'
 
 [[plugins]]
 repo = 'tpope/vim-rails'
+on_ft = 'ruby'
 
 [[plugins]]
 repo = 'tpope/vim-endwise'
@@ -27,6 +28,7 @@ repo = 'alpaca-tc/alpaca_tags'
 
 [[plugins]]
 repo = 'basyura/unite-rails'
+on_ft = 'ruby'
 
 # elixir
 [[plugins]]
@@ -54,6 +56,7 @@ on_ft = 'coffee'
 
 [[plugins]]
 repo = 'cakebaker/scss-syntax.vim'
+on_ft = 'scss'
 
 [[plugins]]
 repo = 'lilydjwg/colorizer'
@@ -65,6 +68,10 @@ on_ft = 'javascript'
 [[plugins]]
 repo = 'slim-template/vim-slim'
 on_ft = 'slim'
+
+[[plugins]]
+repo = 'tpope/vim-haml'
+on_ft = 'haml'
 
 # 補完
 [[plugins]]
