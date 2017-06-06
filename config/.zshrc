@@ -99,6 +99,12 @@ export RBENV_ROOT=$HOME/.rbenv
 export PATH=$RBENV_ROOT/bin:$PATH
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# Rust
+if [ -e $HOME/.cargo/env ]
+  source $HOME/.cargo/env
+fi
+export RUST_PATH=$HOME/.cargo/bin
+
 # golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
