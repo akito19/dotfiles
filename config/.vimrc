@@ -77,6 +77,9 @@ au BufRead,BufNewFile *.ex,*.exs,*.eex set filetype=elixir
 au BufRead,BufNewFile *.py             set filetype=python
 au BufRead,BufNewFile *.php            set filetype=php
 
+" Rust
+let g:rustfmt_autosave = 1
+
 " change cursor shape in different modes
 if exists('$ITERM_PROFILE')
   if exists('$TMUX')

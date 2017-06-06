@@ -42,6 +42,11 @@ on_ft = 'elixir'
 repo = 'fatih/vim-go'
 on_ft = 'go'
 
+# Rust
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+
 # front-end
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
