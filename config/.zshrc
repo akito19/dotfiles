@@ -100,6 +100,9 @@ export PATH=$RBENV_ROOT/bin:$PATH
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Rust
+if [ -d $HOME/.cargo ]; then
+  source $HOME/.cargo/env
+fi
 export RUST_PATH=$HOME/.cargo/bin
 export PATH=$HOME/$RUST_PATH:$PATH
 
