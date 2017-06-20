@@ -94,7 +94,7 @@ typeset -U path PATH
 # Languages
 #
 
-# rbenv
+# Ruby
 export RBENV_ROOT=$HOME/.rbenv
 export PATH=$RBENV_ROOT/bin:$PATH
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -106,10 +106,16 @@ fi
 export RUST_PATH=$HOME/.cargo/bin
 export PATH=$HOME/$RUST_PATH:$PATH
 
-# golang
+# Golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# Python
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+if which rbenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# Zsh settings devided by OS
 DOTFILE_ROOT=$HOME/dotfiles/config
 if [ -d $DOTFILE_ROOT/zsh.d ]; then
   for file in $DOTFILE_ROOT/zsh.d/*; do

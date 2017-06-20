@@ -10,6 +10,10 @@ if ask 'install Golang'
   include_cookbook 'golang'
 end
 
+if ask 'install Python'
+  include_cookbook 'python'
+end
+
 ln '.bash_profile'
 
 include_cookbook 'tmux'
