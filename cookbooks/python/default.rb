@@ -4,6 +4,11 @@ git "#{pyenv_root}/.pyenv" do
   not_if "test -d #{pyenv_root}"
 end
 
-package 'pip3'
-
 # TODO: Write Python versions and set global
+# 1. clone pyenv
+# 2. `$ cd .pyenv/plugins/python-build`
+# 3. `./install.sh`
+# 4. `$ pyenv install VERSIONS`
+# 5. `$ pyenv global VERSION`
+
+package 'pip3'
