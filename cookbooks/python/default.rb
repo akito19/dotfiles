@@ -10,5 +10,3 @@ end
 # 3. `./install.sh`
 # 4. `$ pyenv install VERSIONS`
 # 5. `$ pyenv global VERSION`
-
-package 'pip3'
