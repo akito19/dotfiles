@@ -67,6 +67,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set cursorline
+set cursorcolumn
 set ambiwidth=double
 set laststatus=2
 
