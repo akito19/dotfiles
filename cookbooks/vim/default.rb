@@ -34,6 +34,11 @@ link "#{ENV['HOME']}/.config/nvim/after/ftplugin" do
   force true
 end
 
+link "#{ENV['HOME']}/.config/nvim/colors" do
+  to "#{ENV['HOME']}/.vim/colors"
+  force true
+end
+
 link "#{ENV['HOME']}/.config/nvim/init.vim" do
   to "#{ENV['HOME']}/.vimrc"
   force true
