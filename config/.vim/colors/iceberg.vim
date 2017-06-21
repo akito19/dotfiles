@@ -27,12 +27,12 @@ let g:colors_name = 'iceberg'
 
 
 hi! ColorColumn cterm=NONE ctermbg=235 guibg=#1e2132
-hi! CursorColumn cterm=NONE ctermbg=235 guibg=#1e2132
-hi! CursorLine cterm=NONE ctermbg=235 guibg=#1e2132
-hi! Comment ctermfg=242 guifg=#6b7089
+hi! CursorColumn cterm=NONE ctermbg=240 guibg=#1e2132
+hi! CursorLine cterm=NONE ctermbg=233 guibg=#1e2132
+hi! Comment ctermfg=130 guifg=#6b7089
 hi! Constant ctermfg=140 guifg=#a093c7
 hi! Cursor ctermbg=252 ctermfg=234 guibg=#c6c8d1 guifg=#161821
-hi! CursorLineNr ctermbg=237 ctermfg=253 guibg=#2a3158 guifg=#cdd1e6
+hi! CursorLineNr ctermbg=17 ctermfg=253 guibg=#2a3158 guifg=#cdd1e6
 hi! Delimiter ctermfg=252 guifg=#c6c8d1
 hi! DiffAdd ctermbg=108 ctermfg=234 guibg=#555a47 guifg=#bec4b1
 hi! DiffChange ctermbg=66 ctermfg=234 guibg=#445861 guifg=#adc1cb
@@ -80,7 +80,7 @@ hi! Todo ctermbg=234 ctermfg=150 guibg=#161821 guifg=#d8e599
 hi! Type ctermfg=109 gui=NONE guifg=#89b8c2
 hi! Underlined cterm=underline ctermfg=110 gui=underline guifg=#84a0c6 term=underline
 hi! VertSplit ctermbg=233 ctermfg=233 guibg=#0f1117 guifg=#0f1117
-hi! Visual ctermbg=236 guibg=#272c42
+hi! Visual ctermbg=27 guibg=#272c42
 hi! WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
 hi! diffAdded ctermfg=150 guifg=#b4be82
 hi! diffRemoved ctermfg=203 guifg=#e27878
