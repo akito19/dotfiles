@@ -14,6 +14,10 @@ if ask 'install Python'
   include_cookbook 'python'
 end
 
+if ask 'install Rust'
+  include_cookbook 'rust'
+end
+
 ln '.bash_profile'
 
 include_cookbook 'tmux'
