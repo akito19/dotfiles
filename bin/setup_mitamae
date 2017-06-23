@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-version='1.4.2'
+version='1.4.5'
 mitamae_version="mitamae-${version}"
 
 if ! [ -f "bin/${mitamae_version}" ]; then
@@ -19,7 +19,7 @@ if ! [ -f "bin/${mitamae_version}" ]; then
   esac
 
   # http://www.hcn.zaq.ne.jp/___/unix/curl_manual.html
-  curl -o "bin/${mitamae_bin}.tar.gz" -fL "https://github.com/k0kubun/mitamae/releases/download/v${version}/${mitamae_bin}.tar.gz"
+  curl -o "bin/${mitamae_bin}.tar.gz" -fL "https://github.com/itamae-kitchen/mitamae/releases/download/v${version}/${mitamae_bin}.tar.gz"
   tar xvzf "bin/${mitamae_bin}.tar.gz"
 
   rm "bin/${mitamae_bin}.tar.gz"
