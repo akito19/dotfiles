@@ -1,19 +1,22 @@
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-on_path = '.*'
-
-[[plugins]]
-repo = 'Shougo/unite.vim'
-depends = 'neomru.vim'
-
-[[plugins]]
-repo = 'ujihisa/unite-colorscheme'
-on_source = 'unite.vim'
-
 # NeoVim
 [[plugins]]
 repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
 if = 'has("nvim")'
+hook_source = 'source ~/.config/nvim/plugins/denite.rc.vim'
+
+[[plugins]]
+repo = 'ozelentok/denite-gtags'
+if = 'has("nvim")'
+hook_add = '''
+  nnoremap <leader>a :DeniteCursorWord -buffer-name=gtags_context gtags_context<cr>
+  nnoremap <leader>d :DeniteCursorWord -buffer-name=gtags_def gtags_def<cr>
+  nnoremap <leader>r :DeniteCursorWord -buffer-name=gtags_ref gtags_ref<cr>
+  nnoremap <leader>g :DeniteCursorWord -buffer-name=gtags_grep gtags_grep<cr>
+  nnoremap <leader>t :Denite -buffer-name=gtags_completion gtags_completion<cr>
+  nnoremap <leader>f :Denite -buffer-name=gtags_file gtags_file<cr>
+  nnoremap <leader>p :Denite -buffer-name=gtags_path gtags_path<cr>
+'''
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
