@@ -231,7 +231,6 @@ endfunction
 function! LightLineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
-""""""""""""""""""""""""""""""
 
 " http://inari.hatenablog.com/entry/2014/05/05/231307
 """"""""""""""""""""""""""""""
@@ -249,13 +248,13 @@ if has('syntax')
   augroup END
   call ZenkakuSpace()
 endif
-""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
 " NeoVim 固有設定
 """"""""""""""""""""""""""""""
 if has('nvim')
   " change cursor in defferent modes
-  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
   let g:deoplete#enable_at_startup = 1
+  " for Mac
+  let g:python3_host_prog = '/usr/local/bin/python3'
 endif

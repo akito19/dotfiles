@@ -6,7 +6,7 @@ end
 
 if node[:platform] == 'darwin'
   package 'neovim/neovim/neovim'
-  package 'ctags'
+  package 'global'
 end
 
 ln '.vim'
@@ -36,6 +36,11 @@ end
 
 link "#{ENV['HOME']}/.config/nvim/colors" do
   to "#{ENV['HOME']}/.vim/colors"
+  force true
+end
+
+link "#{ENV['HOME']}/.config/nvim/plugins" do
+  to "#{ENV['HOME']}/.vim/plugins"
   force true
 end
 
