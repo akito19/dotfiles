@@ -29,7 +29,7 @@ let g:colors_name = 'iceberg'
 hi! ColorColumn cterm=NONE ctermbg=235 guibg=#1e2132
 hi! CursorColumn cterm=NONE ctermbg=240 guibg=#1e2132
 hi! CursorLine cterm=NONE ctermbg=233 guibg=#1e2132
-hi! Comment ctermfg=130 guifg=#6b7089
+hi! Comment ctermfg=105 guifg=#6b7089
 hi! Constant ctermfg=140 guifg=#a093c7
 hi! Cursor ctermbg=252 ctermfg=234 guibg=#c6c8d1 guifg=#161821
 hi! CursorLineNr ctermbg=17 ctermfg=253 guibg=#2a3158 guifg=#cdd1e6
