@@ -16,8 +16,8 @@ env:
 # Window dimensions in character columns and lines
 # (changes require restart)
 dimensions:
-  columns: 100
-  lines: 40
+  columns: 140
+  lines: 90
 
 # Adds this many blank pixels of padding around the window
 # Units are physical pixels; this is not DPI aware.
@@ -91,7 +91,7 @@ custom_cursor_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x1d1f21'
+    background: '0x192129'
     foreground: '0xc5c8c6'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
