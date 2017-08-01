@@ -206,7 +206,7 @@ function get_battery_color_tmux()
                 # Discharging and 1% ~ 10%, 10%+
                 if [ "$percentage" -ge "$battery_danger" ]; then
                     #echo "#[fg=blue]${percentage}%#[default]"
-                    color_tmux_echomsg="#[fg=black]${percentage}%#[default]"
+                    color_tmux_echomsg="#[fg=blue]${percentage}%#[default]"
                     if [[ -n $t_opt ]]; then
                         color_tmux_echomsg="$color_tmux_echomsg ($time_remain)"
                     fi
@@ -231,7 +231,7 @@ function get_battery_color_tmux()
                 # Discharging and 1% ~ 10%, 10%+
                 if [ $(echo "$percentage" | cut -d. -f1) -ge "$battery_danger" ]; then
                     #echo "#[fg=blue]${percentage}%#[default]"
-                    color_tmux_echomsg="#[fg=black]${percentage}%#[default]"
+                    color_tmux_echomsg="#[fg=blue]${percentage}%#[default]"
                     if [[ -n $t_opt ]]; then
                         color_tmux_echomsg="$color_tmux_echomsg ($time_remain)"
                     fi
