@@ -5,6 +5,4 @@
 # aliases for Linux
 alias v="vim"
 
-export LANG=en_US.UTF-8
-
 MANPATH=/usr/local/man:$MANPATH
