@@ -43,8 +43,8 @@ zplug load
 setopt prompt_subst
 autoload -Uz colors
 colors
-PROMPT="%{$fg[green]%}%n@%m:%{$fg_bold[blue]%}[%3~]%{$reset_color%}
-%# "
+LINE=$'\n'
+PROMPT="%{$fg[green]%}%n@%m:%{$fg_bold[blue]%}[%3~]%{$reset_color%}$LINE%# "
 
 #
 # http://mollifier.hatenablog.com/entry/20100906/p1
