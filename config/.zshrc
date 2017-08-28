@@ -41,18 +41,16 @@ zplug load
 #
 
 setopt prompt_subst
-autoload -Uz colors
-colors
-LINE=$'\n'
-PROMPT="%{$fg[green]%}%n@%m:%{$fg_bold[blue]%}[%3~]%{$reset_color%}$LINE%# "
+autoload -Uz promptinit
+promptinit
+prompt adam1
 
 #
 # http://mollifier.hatenablog.com/entry/20100906/p1
 # git prompt
 #
 
-autoload -Uz add-zsh-hook
-autoload -Uz vcs_info
+autoload -Uz add-zsh-hook vcs_info
 
 zstyle ':vcs_info:*' enable git svn hg bzr
 zstyle ':vcs_info:*' formats '(%s)-[%b]'
@@ -65,7 +63,6 @@ zstyle ':vcs_info:git:*' stagedstr "+"    # 適当な文字列に変更する
 zstyle ':vcs_info:git:*' unstagedstr "-"  # 適当な文字列に変更する
 zstyle ':vcs_info:git:*' formats '(%s)-[%b] %c%u'
 zstyle ':vcs_info:git:*' actionformats '(%s)-[%b|%a] %c%u'
-
 
 function _update_vcs_info_msg() {
     psvar=()
@@ -90,8 +87,9 @@ export GIT_MERGE_AUTOEDIT=no
 export HOMEBEW_CASK_OPTS="--appdir=/Applications"
 
 export HISTFILE=$HOME/.zsh_history
-export HISTSIZE=1500
+export HISTSIZE=10000
 export SAVEHIST=100000
+setopt hist_ignore_all_dups
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
 typeset -U path PATH
