@@ -4,9 +4,16 @@ define :vim, options: '--with-lua --with-luajit' do
   end
 end
 
-if node[:platform] == 'darwin'
+case node[:platform]
+when 'darwin'
   package 'neovim/neovim/neovim'
   package 'global'
+when 'ubuntu'
+  package 'python-dev'
+  package 'python-pip'
+  package 'python3-dev'
+  package 'python3-pip'
+  package 'neovim'
 end
 
 ln '.vim'

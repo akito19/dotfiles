@@ -3,6 +3,6 @@
 #
 
 # aliases for Linux
-alias v="vim"
+alias v="nvim"
 
 MANPATH=/usr/local/man:$MANPATH
