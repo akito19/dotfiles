@@ -6,3 +6,5 @@ export EC2_URL=https://ec2.ap-northeast-1.amazonaws.com
 export EC2_REGION=ap-northeast-1
 
 export GIT_EDITOR=vim
+
+export PATH="$HOME/.cargo/bin:$PATH"
