@@ -3,4 +3,7 @@ set -e
 
 ~/dotfiles/bin/setup_mitamae
 
-~/dotfiles/bin/mitamae local ~/dotfiles/bootstrap.rb
+case "$(uname)" in
+  "Darwin") ./bin/mitamae local $@ ./bootstrap.rb ;;
+  *)  sudo -E bin/mitamae local $@ ./bootstrap.rb ;;
+esac

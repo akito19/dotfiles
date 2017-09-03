@@ -1,5 +1,8 @@
-package 'go'
-package 'peco'
+if node[:platform] == 'darwin'
+  package 'go'
+else
+  package 'golang-go'
+end
 
 # Make directory for golang
 directory "#{ENV['HOME']}/go/src/github.com/akito19" do
@@ -38,4 +41,5 @@ directory "#{ENV['HOME']}/.config/ptmux" do
   not_if "test -d #{ENV['HOME']}/.config/ptmux"
 end
 
+package 'peco'
 ln '.peco'

@@ -1,5 +1,8 @@
 package 'tmux'
-package 'reattach-to-user-namespace'
+
+if node[:platform] == 'darwin'
+  package 'reattach-to-user-namespace'
+end
 
 scripts = [
   "~/dotfiles/config/bin/battery",

@@ -24,9 +24,6 @@ on_ft = 'ruby'
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
-repo = 'alpaca-tc/alpaca_tags'
-
-[[plugins]]
 repo = 'basyura/unite-rails'
 on_ft = 'ruby'
 
