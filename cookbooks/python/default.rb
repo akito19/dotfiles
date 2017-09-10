@@ -1,5 +1,5 @@
 pyenv_root = "#{ENV['HOME']}/.pyenv"
-git "#{pyenv_root}/.pyenv" do
+git "#{pyenv_root}" do
   repository "https://github.com/pyenv/pyenv.git"
   not_if "test -d #{pyenv_root}"
 end
