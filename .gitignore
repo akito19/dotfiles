@@ -1,7 +1,7 @@
 # MItamae
 bin/mitamae*
 
-## Mac
+# Mac
 .DS_Store
 *~
 .AppleDouble
@@ -14,10 +14,10 @@ bin/mitamae*
 tags
 dump.rdb
 
-## vim
+# vim
 *.swp
 
-## archives
+# archives
 *.zip
 *.lzh
 *.tar.gz
@@ -25,7 +25,10 @@ dump.rdb
 *.bz2
 *.dmg
 
-## exectables
+# exectables
 *.exe
 *.out
 *.app
+
+# Backup
+*.bak
