@@ -1,5 +1,5 @@
 # Dotfiles Based on MItamae
-[MItamae](https://github.com/k0kubun/mitamae) is a configuration management tool.
+[MItamae](https://github.com/itamae-kitchen/mitamae) is a configuration management tool.
 
 ## Installation
 If you use macOS, you can execute follow command:
