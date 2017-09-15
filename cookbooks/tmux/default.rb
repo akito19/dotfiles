@@ -1,7 +1,16 @@
 package 'tmux'
 
-if node[:platform] == 'darwin'
+case node[:platform]
+when 'darwin'
   package 'reattach-to-user-namespace'
+when 'ubuntu'
+  package 'xsel'
+end
+
+tpm_root = "#{ENV['HOME']}/.tmux/plugins/tpm"
+git "#{tpm_root}" do
+  repository "https://github.com/tmux-plugins/tpm.git"
+  not_if "test -d #{tpm_root}"
 end
 
 scripts = [
