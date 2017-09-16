@@ -1,7 +1,10 @@
 package 'tmux'
 
-if node[:platform] == 'darwin'
+case node[:platform]
+when 'darwin'
   package 'reattach-to-user-namespace'
+when 'ubuntu'
+  package 'xsel'
 end
 
 scripts = [
