@@ -5,6 +5,10 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
+# Set OSTYPE as ENV
+# The option below is used for tmux mainly.
+export OSTYPE=$OSTYPE
+
 # configuration umask
 umask 022
 
