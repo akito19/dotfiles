@@ -3,9 +3,8 @@ node.reverse_merge!(
     user: 'akito',
     global: '2.4.1',
     versions: %w[
-      2.4.1
+      2.4.2
       2.3.3
-      2.3.1
     ],
   }
 )
