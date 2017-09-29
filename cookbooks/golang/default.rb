@@ -1,7 +1,10 @@
-if node[:platform] == 'darwin'
+case node[:platform] == 'darwin'
+when 'darwin'
   package 'go'
-else
-  package 'golang-go'
+when 'ubuntu'
+  # `golang-go` package installs TOO OLD version of go.
+  # So following `package` is commented out.
+  # package 'golang-go'
 end
 
 # Make directory for golang
