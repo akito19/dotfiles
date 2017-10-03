@@ -1,4 +1,4 @@
-case node[:platform] == 'darwin'
+case
 when 'darwin'
   package 'go'
 when 'ubuntu'
