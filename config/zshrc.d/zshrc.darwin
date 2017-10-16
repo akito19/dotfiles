@@ -18,6 +18,7 @@ fi
 # aliases for MacOS X
 alias v='nvim'
 alias ls='ls -G -F'
+alias ctags="`brew --prefix`/bin/ctags"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
