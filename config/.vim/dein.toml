@@ -115,3 +115,6 @@ repo = "jiangmiao/auto-pairs"
 
 [[plugins]]
 repo = "airblade/vim-gitgutter"
+
+# Tags
+repo = 'szw/vim-tags'
