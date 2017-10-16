@@ -57,6 +57,7 @@ set scrolloff=5
 set backspace=indent,eol,start
 set clipboard=unnamed
 set visualbell t_bl=
+set noerrorbells
 
 " 表示設定
 set number      " 行番号表示
@@ -98,7 +99,6 @@ if !argc()
   autocmd vimenter * NERDTree|normal gg3j
 endif
 
-" ビープ音を消す
 set visualbell t_vb=
 set noerrorbells
 
@@ -133,10 +133,6 @@ inoremap <silent> <BS> <C-R>=DeleteParenthesesAdjoin()<CR>
 " vim-javascript-syntax
 au FileType javascript call JavaScriptFold()
 
-" vim-coffee-script
-au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
-autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
-
 " indentLine 設定
 let g:loaded_indentLine = 1
 let g:indentLine_char = '¦'
@@ -151,12 +147,6 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 0
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
-" </ でHTMLの閉じタグ補完
-augroup MyXML
-  autocmd!
-  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
-  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
-augroup END
 
 " 行末の空白文字を可視化
 highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#FF0000
@@ -233,9 +223,6 @@ function! LightLineMode()
 endfunction
 
 " http://inari.hatenablog.com/entry/2014/05/05/231307
-""""""""""""""""""""""""""""""
-" 全角スペースの表示
-""""""""""""""""""""""""""""""
 function! ZenkakuSpace()
   highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
 endfunction
@@ -249,9 +236,13 @@ if has('syntax')
   call ZenkakuSpace()
 endif
 
-""""""""""""""""""""""""""""""
-" NeoVim 固有設定
-""""""""""""""""""""""""""""""
+" Ctags
+nnoremap <C-]> g<C-]>
+nnoremap <C-[> <C-t>
+nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>>
+
+" For NeoVim
 if has('nvim')
   " change cursor in defferent modes
   let g:deoplete#enable_at_startup = 1
