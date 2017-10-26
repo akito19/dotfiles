@@ -88,11 +88,10 @@ setopt auto_menu
 
 export GIT_EDITOR=vim
 export GIT_MERGE_AUTOEDIT=no
-export HOMEBEW_CASK_OPTS="--appdir=/Applications"
 
 export HISTFILE=$HOME/.zsh_history
-export HISTSIZE=10000
-export SAVEHIST=100000
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY

@@ -14,7 +14,6 @@ endif
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-" なければgit clone
 if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_dir)
     execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
@@ -22,7 +21,6 @@ if &runtimepath !~# '/dein.vim'
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-" TOMLを読み込み、キャッシュする
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
@@ -45,12 +43,12 @@ endif
 
 filetype plugin indent on
 
-" カラースキーマデフォルト
+" Color
 syntax enable
 colorscheme iceberg
 
 " 基本設定
-set noswapfile  " .swpを生成しない
+set noswapfile
 set autoread    " 他でファイルが表示されたとき自動で読み込む
 set ruler       " カーソルが何行目の何列目に置かれているかを表示する
 set scrolloff=5
@@ -60,8 +58,8 @@ set visualbell t_bl=
 set noerrorbells
 
 " 表示設定
-set number      " 行番号表示
-set title       " タイトル表示
+set number
+set title
 set showmatch   " 対応する括弧を表示
 set autoindent
 set expandtab
@@ -157,10 +155,8 @@ au WinEnter * let w:m1 = matchadd("WhitespaceEOL", ' +$')
 set wrapscan
 set hlsearch    " 検索結果をハイライト表示する
 
-" https://github.com/itchyny/lightline.vim
-""""""""""""""""""""""""""""""
 " lightline.vim 設定諸々
-""""""""""""""""""""""""""""""
+" https://github.com/itchyny/lightline.vim
 let g:lightline = {
         \ 'colorscheme': 'wombat',
         \ 'mode_map': {'c': 'NORMAL'},
@@ -178,33 +174,6 @@ let g:lightline = {
         \   'mode': 'LightLineMode'
         \ }
         \ }
-
-function! LightLineModified()
-  return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
-
-function! LightLineReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? 'x' : ''
-endfunction
-
-function! LightLineFilename()
-  return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \  &ft == 'unite' ? unite#get_status_string() :
-        \  &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
-        \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
-endfunction
-
-function! LightLineFugitive()
-  try
-    if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head')
-      return fugitive#head()
-    endif
-  catch
-  endtry
-  return ''
-endfunction
 
 function! LightLineFileformat()
   return winwidth(0) > 70 ? &fileformat : ''
