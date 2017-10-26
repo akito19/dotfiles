@@ -164,30 +164,39 @@ let g:lightline = {
         \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
         \ },
         \ 'component_function': {
-        \   'modified': 'LightLineModified',
-        \   'readonly': 'LightLineReadonly',
-        \   'fugitive': 'LightLineFugitive',
-        \   'filename': 'LightLineFilename',
-        \   'fileformat': 'LightLineFileformat',
-        \   'filetype': 'LightLineFiletype',
-        \   'fileencoding': 'LightLineFileencoding',
-        \   'mode': 'LightLineMode'
+        \   'readonly': 'LightlineReadonly',
+        \   'fugitive': 'fugitive#head',
+        \   'filename': 'LightlineFilename',
+        \   'fileformat': 'LightlineFileformat',
+        \   'filetype': 'LightlineFiletype',
+        \   'fileencoding': 'LightlineFileencoding',
+        \   'mode': 'LightlineMode'
         \ }
         \ }
 
-function! LightLineFileformat()
+function! LightlineReadonly()
+  return &readonly && &filetype !=# 'help' ? 'RO' : ''
+endfunction
+
+function! LightlineFilename()
+  let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+  let modified = &modified ? ' +' : ''
+  return filename . modified
+endfunction
+
+function! LightlineFileformat()
   return winwidth(0) > 70 ? &fileformat : ''
 endfunction
 
-function! LightLineFiletype()
+function! LightlineFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
 endfunction
 
-function! LightLineFileencoding()
+function! LightlineFileencoding()
   return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
 endfunction
 
-function! LightLineMode()
+function! LightlineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
