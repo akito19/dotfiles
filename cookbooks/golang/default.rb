@@ -1,4 +1,4 @@
-case
+case node[:platform]
 when 'darwin'
   package 'go'
 when 'ubuntu'
