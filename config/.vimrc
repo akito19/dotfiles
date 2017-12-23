@@ -53,7 +53,8 @@ set autoread    " 他でファイルが表示されたとき自動で読み込�
 set ruler       " カーソルが何行目の何列目に置かれているかを表示する
 set scrolloff=5
 set backspace=indent,eol,start
-set clipboard=unnamed
+set clipboard&
+set clipboard^=unnamedplus
 set visualbell t_bl=
 set noerrorbells
 
