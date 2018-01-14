@@ -26,3 +26,6 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # PostgreSQL configuration
 export PGDATA=/usr/local/var/postgres
+
+# https://github.com/puma/puma/issues/1421
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
