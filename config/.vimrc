@@ -92,16 +92,6 @@ if exists('$ITERM_PROFILE')
   endif
 end
 
-" NERDTree
-let NERDTreeShowHidden = 1
-
-if !argc()
-  autocmd vimenter * NERDTree|normal gg3j
-endif
-
-set visualbell t_vb=
-set noerrorbells
-
 " 記号補完
 function! DeleteParenthesesAdjoin()
     let pos = col(".") - 1  " カーソルの位置．1からカウント

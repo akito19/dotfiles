@@ -8,9 +8,6 @@ repo = 'Shougo/vimproc.vim'
     linux = 'make'
     unix  = 'gmake'
 
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-
 # ruby, rails
 [[plugins]]
 repo = 'vim-ruby/vim-ruby'
