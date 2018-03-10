@@ -100,6 +100,9 @@ on_ft = 'toml'
 [[plugins]]
 repo = 'terryma/vim-multiple-cursors'
 
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
 # 表示
 [[plugins]]
 repo = 'Yggdroot/indentLine'
