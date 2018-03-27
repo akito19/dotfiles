@@ -81,6 +81,9 @@ au BufRead,BufNewFile *.rs             set filetype=rust
 " Rust
 let g:rustfmt_autosave = 1
 
+" JavaScript
+let g:vim_jsx_pretty_colorful_config = 1
+
 " change cursor shape in different modes
 if exists('$ITERM_PROFILE')
   if exists('$TMUX')
@@ -119,9 +122,6 @@ function! DeleteParenthesesAdjoin()
 endfunction
 " BackSpaceに割り当て
 inoremap <silent> <BS> <C-R>=DeleteParenthesesAdjoin()<CR>
-
-" vim-javascript-syntax
-au FileType javascript call JavaScriptFold()
 
 " indentLine 設定
 let g:loaded_indentLine = 1

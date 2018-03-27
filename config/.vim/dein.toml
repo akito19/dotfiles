@@ -56,12 +56,16 @@ on_ft = 'scss'
 repo = 'lilydjwg/colorizer'
 
 [[plugins]]
-repo = 'jelera/vim-javascript-syntax'
+repo = 'pangloss/vim-javascript'
 on_ft = 'javascript'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
 on_ft = 'typescript'
+
+[[plugins]]
+repo = 'MaxMEllon/vim-jsx-pretty'
+on_ft = ['javascript', 'typescript']
 
 [[plugins]]
 repo = 'slim-template/vim-slim'
