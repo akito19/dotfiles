@@ -75,6 +75,10 @@ on_ft = 'slim'
 repo = 'tpope/vim-haml'
 on_ft = 'haml'
 
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = 'vue'
+
 # 補完
 [[plugins]]
 repo = 'Shougo/neosnippet'
