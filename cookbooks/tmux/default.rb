@@ -3,7 +3,7 @@ package 'tmux'
 case node[:platform]
 when 'darwin'
   package 'reattach-to-user-namespace'
-when 'ubuntu'
+when 'ubuntu', 'arch'
   package 'xsel'
 end
 

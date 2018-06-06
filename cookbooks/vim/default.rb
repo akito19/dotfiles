@@ -14,6 +14,8 @@ when 'ubuntu'
   package 'python3-dev'
   package 'python3-pip'
   package 'neovim'
+when 'arch'
+  package 'neovim'
 end
 
 ln '.vim'

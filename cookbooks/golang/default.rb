@@ -5,6 +5,8 @@ when 'ubuntu'
   # `golang-go` package installs TOO OLD version of go.
   # So following `package` is commented out.
   # package 'golang-go'
+when 'arch'
+  package 'go'
 end
 
 # Make directory for golang
@@ -44,5 +46,10 @@ directory "#{ENV['HOME']}/.config/ptmux" do
   not_if "test -d #{ENV['HOME']}/.config/ptmux"
 end
 
-package 'peco'
+if node[:platform] == 'arch'
+  include_cookbook 'yaourt'
+  yaourt 'peco'
+else
+  package 'peco'
+end
 ln '.peco'
