@@ -8,6 +8,7 @@ export LC_CTYPE=en_US.UTF-8
 # Set OSTYPE as ENV
 # The option below is used for tmux mainly.
 export OSTYPE=$OSTYPE
+export XDG_CONFIG_HOME=~/.config
 
 # configuration umask
 umask 022

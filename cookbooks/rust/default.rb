@@ -9,3 +9,6 @@ else
   # TODO
   MItamae.logger.info("It hasn't set recipe...")
 end
+
+# Need for alacritty(Copy & Paste)
+package 'xclip'
