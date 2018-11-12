@@ -71,7 +71,7 @@ set ambiwidth=double
 set laststatus=2
 
 " File type
-au BufRead,BufNewFile *.rb,*.jb        set filetype=ruby
+au BufRead,BufNewFile *.rb,*.jb,*.rbi  set filetype=ruby
 au BufRead,BufNewFile *.go             set filetype=go
 au BufRead,BufNewFile *.ex,*.exs,*.eex set filetype=elixir
 au BufRead,BufNewFile *.py             set filetype=python

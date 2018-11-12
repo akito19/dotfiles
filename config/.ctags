@@ -1,0 +1,5 @@
+--append=yes
+--recurse=yes
+--exclude=*.js
+--langmap=Ruby:+.jb,JavaScript:+.jsx
+
