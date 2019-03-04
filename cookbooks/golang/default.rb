@@ -4,7 +4,7 @@ when 'darwin'
 when 'ubuntu'
   # `golang-go` package installs TOO OLD version of go.
   # So following `package` is commented out.
-  # package 'golang-go'
+  package 'golang-go'
 when 'arch'
   package 'go'
 end
