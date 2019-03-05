@@ -139,3 +139,6 @@ case $OSTYPE in
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.linux ] && source $DOTFILE_ROOT/zshrc.d/zshrc.linux
     ;;
 esac
+
+# opam configuration
+test -r /home/akito/.opam/opam-init/init.zsh && . /home/akito/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
