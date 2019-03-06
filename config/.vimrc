@@ -139,6 +139,17 @@ let g:go_fmt_autosave = 0
 let g:go_version_warning = 0
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
+" Configuration binary
+augroup Binary
+  au!
+  au BufReadPre  *.bin let &binary =1
+  au BufReadPost * if &binary | silent %!xxd -g 1
+  au BufReadPost * set ft=xxd | endif
+  au BufWritePre * if &binary | %!xxd -r | endif
+  au BufWritePost * if &binary | silent %!xxd -g 1
+  au BufWritePost * set nomod | endif
+  au!
+augroup END
 
 " 行末の空白文字を可視化
 highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#FF0000
