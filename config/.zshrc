@@ -123,6 +123,9 @@ export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+# OCaml
+test -r /home/akito/.opam/opam-init/init.zsh && . /home/akito/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
 # Zsh settings devided by OS
 DOTFILE_ROOT=$HOME/dotfiles/config
 if [ -d $DOTFILE_ROOT/zsh.d ]; then
@@ -139,6 +142,3 @@ case $OSTYPE in
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.linux ] && source $DOTFILE_ROOT/zshrc.d/zshrc.linux
     ;;
 esac
-
-# opam configuration
-test -r /home/akito/.opam/opam-init/init.zsh && . /home/akito/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
