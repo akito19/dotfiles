@@ -43,6 +43,10 @@ on_ft = 'go'
 repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
 
+[[plugins]]
+repo = 'neovimhaskell/haskell-vim'
+on_ft = 'haskell'
+
 # front-end
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'

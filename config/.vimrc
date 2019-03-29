@@ -78,6 +78,7 @@ au BufRead,BufNewFile *.py             set filetype=python
 au BufRead,BufNewFile *.php            set filetype=php
 au BufRead,BufNewFile *.rs             set filetype=rust
 au BufRead,BufNewFile *.c              set filetype=c
+au BufRead,BufNewFile *.hs             set filetype=haskell
 
 " Rust
 let g:rustfmt_autosave = 1
