@@ -126,6 +126,9 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 # OCaml
 test -r /home/akito/.opam/opam-init/init.zsh && . /home/akito/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
+# Haskell
+export PATH=/usr/local/bin/stack:$PATH
+
 # Zsh settings devided by OS
 DOTFILE_ROOT=$HOME/dotfiles/config
 if [ -d $DOTFILE_ROOT/zsh.d ]; then
