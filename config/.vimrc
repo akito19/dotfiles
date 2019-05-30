@@ -80,6 +80,10 @@ au BufRead,BufNewFile *.rs             set filetype=rust
 au BufRead,BufNewFile *.c              set filetype=c
 au BufRead,BufNewFile *.hs             set filetype=haskell
 
+" quickrun.vim
+set splitbelow
+let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
+
 " Rust
 let g:rustfmt_autosave = 1
 

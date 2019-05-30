@@ -8,6 +8,9 @@ repo = 'Shougo/vimproc.vim'
     linux = 'make'
     unix  = 'gmake'
 
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
 # ruby, rails
 [[plugins]]
 repo = 'vim-ruby/vim-ruby'
@@ -43,6 +46,7 @@ on_ft = 'go'
 repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
 
+# Haskell
 [[plugins]]
 repo = 'neovimhaskell/haskell-vim'
 on_ft = 'haskell'
