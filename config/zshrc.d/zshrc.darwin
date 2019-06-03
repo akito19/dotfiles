@@ -34,3 +34,6 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export LDFLAGS="-L/usr/local/opt/libxml2/lib"
 export CPPFLAGS="-I/usr/local/opt/libxml2/include"
 export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
+
+# Workaround for node 12 install breakings (2019-06-02)
+export PATH="/usr/local/opt/node@10/bin:$PATH"
