@@ -51,6 +51,18 @@ on_ft = 'rust'
 repo = 'neovimhaskell/haskell-vim'
 on_ft = 'haskell'
 
+[[plugins]]
+repo = 'dag/vim2hs'
+on_ft = 'haskell'
+
+[[plugins]]
+repo = 'eagletmt/ghcmod-vim'
+on_ft = 'haskell'
+
+[[plugins]]
+repo = 'eagletmt/neco-ghc'
+on_ft = 'haskell'
+
 # front-end
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'

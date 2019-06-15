@@ -84,9 +84,6 @@ au BufRead,BufNewFile *.hs             set filetype=haskell
 set splitbelow
 let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
 
-" Rust
-let g:rustfmt_autosave = 1
-
 " JavaScript
 let g:vim_jsx_pretty_colorful_config = 1
 
@@ -133,16 +130,6 @@ inoremap <silent> <BS> <C-R>=DeleteParenthesesAdjoin()<CR>
 let g:loaded_indentLine = 1
 let g:indentLine_char = '¦'
 let g:indentLine_enabled = 1
-
-" configuration golang
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-
-let g:go_fmt_command = "goimports"
-let g:go_fmt_autosave = 0
-let g:go_version_warning = 0
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
 " Configuration binary
 augroup Binary
