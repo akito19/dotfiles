@@ -11,6 +11,9 @@ repo = 'Shougo/vimproc.vim'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+
 # ruby, rails
 [[plugins]]
 repo = 'vim-ruby/vim-ruby'

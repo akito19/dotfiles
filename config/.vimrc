@@ -82,7 +82,7 @@ au BufRead,BufNewFile *.hs             set filetype=haskell
 
 " quickrun.vim
 set splitbelow
-let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
+let g:quickrun_config = {'*': {'hook/time/enable': '1', 'split': ''}}
 
 " JavaScript
 let g:vim_jsx_pretty_colorful_config = 1
@@ -97,6 +97,12 @@ if exists('$ITERM_PROFILE')
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
   endif
 end
+
+" LanguageClient-neovim
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'haskell': ['hie-wrapper'],
+    \ }
 
 " 記号補完
 function! DeleteParenthesesAdjoin()
