@@ -30,6 +30,9 @@ export PGDATA=/usr/local/var/postgres
 # https://github.com/puma/puma/issues/1421
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
+# MySQL 5.7:w
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
 # nokogiri gem
 export LDFLAGS="-L/usr/local/opt/libxml2/lib"
 export CPPFLAGS="-I/usr/local/opt/libxml2/include"
