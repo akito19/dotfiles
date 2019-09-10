@@ -129,6 +129,10 @@ test -r /home/akito/.opam/opam-init/init.zsh && . /home/akito/.opam/opam-init/in
 # Haskell
 export PATH=$HOME/.local/bin:$PATH
 
+# Node.js
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 # Zsh settings devided by OS
 DOTFILE_ROOT=$HOME/dotfiles/config
 if [ -d $DOTFILE_ROOT/zsh.d ]; then
