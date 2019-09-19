@@ -41,5 +41,8 @@ export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
 # Embulk
 export PATH="$HOME/.embulk/bin:$PATH"
 
+# Digdag
+export PATH="$HOME/bin:$PATH"
+
 # Workaround for node 12 install breakings (2019-06-02)
 export PATH="/usr/local/opt/node@10/bin:$PATH"
