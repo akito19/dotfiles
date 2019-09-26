@@ -144,6 +144,7 @@ fi
 case $OSTYPE in
   darwin*)
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.darwin ] && source $DOTFILE_ROOT/zshrc.d/zshrc.darwin
+    [ -f $DOTFILE_ROOT/zshrc.d/zshrc.td ] && source $DOTFILE_ROOT/zshrc.d/zshrc.td
     ;;
   linux*)
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.linux ] && source $DOTFILE_ROOT/zshrc.d/zshrc.linux
