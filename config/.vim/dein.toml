@@ -102,6 +102,11 @@ on_ft = 'haml'
 repo = 'posva/vim-vue'
 on_ft = 'vue'
 
+# Text
+[[plugins]]
+repo = 'tpope/vim-markdown'
+on_ft = 'md'
+
 # 補完
 [[plugins]]
 repo = 'Shougo/neosnippet'
