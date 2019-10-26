@@ -32,3 +32,6 @@ dump.rdb
 
 # Backup
 *.bak
+
+# Work
+config/zshrc.d/zshrc.td
