@@ -40,6 +40,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
 
 # Haskell
 export PATH="$HOME/.ghcup/bin:$PATH"
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
 # Embulk
 export PATH="$HOME/.embulk/bin:$PATH"
