@@ -8,7 +8,7 @@ export LC_CTYPE=en_US.UTF-8
 # Set OSTYPE as ENV
 # The option below is used for tmux mainly.
 export OSTYPE=$OSTYPE
-export XDG_CONFIG_HOME=~/.config
+export XDG_CONFIG_HOME=$HOME/.config
 
 # configuration umask
 umask 022
@@ -19,12 +19,12 @@ plugins=(git ruby gem osx bundler brew rails)
 # Plugins -zplug-
 #
 
-if [[ ! -d ~/.zplug ]]; then
-  git clone https://github.com/zplug/zplug ~/.zplug
-  source ~/.zplug/init.zsh && zplug update --self
+if [[ ! -d $HOME/.zplug ]]; then
+  git clone https://github.com/zplug/zplug $HOME/.zplug
+  source $HOME/.zplug/init.zsh && zplug update --self
 fi
 
-source ~/.zplug/init.zsh
+source $HOME/.zplug/init.zsh
 
 # write "user_name/repository"
 zplug "zsh-users/zsh-syntax-highlighting"
@@ -64,8 +64,8 @@ zstyle ':vcs_info:(svn|bzr):*' branchformat '%b:r%r'
 zstyle ':vcs_info:bzr:*' use-simple true
 
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "+"    # 適当な文字列に変更する
-zstyle ':vcs_info:git:*' unstagedstr "-"  # 適当な文字列に変更する
+zstyle ':vcs_info:git:*' stagedstr "+"
+zstyle ':vcs_info:git:*' unstagedstr "-"
 zstyle ':vcs_info:git:*' formats '(%s)-[%b] %c%u'
 zstyle ':vcs_info:git:*' actionformats '(%s)-[%b|%a] %c%u'
 
@@ -124,7 +124,7 @@ export PATH=$PYENV_ROOT/bin:$PATH
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # OCaml
-test -r /home/akito/.opam/opam-init/init.zsh && . /home/akito/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # Haskell
 export PATH=$HOME/.local/bin:$PATH
