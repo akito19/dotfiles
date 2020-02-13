@@ -10,3 +10,7 @@ node.reverse_merge!(
 )
 
 include_recipe "rbenv::user"
+
+execute "bundler settings" do
+  command "bundle config set path 'vendor/bundle'"
+end
