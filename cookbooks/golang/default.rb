@@ -2,9 +2,7 @@ case node[:platform]
 when 'darwin'
   package 'go'
 when 'ubuntu'
-  # `golang-go` package installs TOO OLD version of go.
-  # So following `package` is commented out.
-  package 'golang-go'
+  # https://golang.org/dl/
 when 'arch'
   package 'go'
 end
