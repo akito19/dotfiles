@@ -19,6 +19,7 @@ if ask 'install Rust'
 end
 
 ln '.bash_profile'
+ln '.latexmkrc'
 
 include_cookbook 'tmux'
 include_cookbook 'zsh'

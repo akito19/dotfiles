@@ -20,6 +20,7 @@ end
 
 ln '.bash_profile'
 ln '.ctags'
+ln '.latexmkrc'
 
 include_cookbook 'tmux'
 include_cookbook 'zsh'
