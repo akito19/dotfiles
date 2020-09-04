@@ -28,6 +28,12 @@ if dein#load_state(s:dein_dir)
   let s:toml      = '~/dotfiles/config/.vim/dein.toml'
   let s:lazy_toml = '~/dotfiles/config/.vim/dein_lazy.toml'
 
+  " LSP
+  call dein#add('autozimu/LanguageClient-neovim', {
+    \ 'rev': 'next',
+    \ 'build': 'bash install.sh',
+    \ })
+
   " TOML を読み込み、キャッシュしておく
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
@@ -100,6 +106,8 @@ if exists('$ITERM_PROFILE')
 end
 
 " LanguageClient-neovim
+" Required for operations modifying multiple buffers like rename.
+set hidden
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'haskell': ['hie-wrapper'],
