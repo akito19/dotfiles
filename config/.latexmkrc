@@ -1,5 +1,11 @@
 #!/usr/bin/env perl
 
+# PDF Preview
+# ```
+# $ latexmk -pv foo.tex
+# $ latexmk -pvc foo.tex
+# ```
+
 # LaTeX
 $latex = 'platex -synctex=1 -halt-on-error -file-line-error %O %S';
 $max_repeat = 5;
