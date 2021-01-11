@@ -83,7 +83,7 @@ au BufRead,BufNewFile *.ex,*.exs,*.eex      set filetype=elixir
 au BufRead,BufNewFile *.py                  set filetype=python
 au BufRead,BufNewFile *.php                 set filetype=php
 au BufRead,BufNewFile *.rs                  set filetype=rust
-au BufRead,BufNewFile *.c                   set filetype=c
+au BufRead,BufNewFile *.c,*.cu              set filetype=c
 au BufRead,BufNewFile *.hs                  set filetype=haskell
 au BufRead,BufNewFile *.yml,*.yaml,*.dig    set filetype=yaml
 
