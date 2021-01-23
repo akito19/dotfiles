@@ -57,3 +57,8 @@ link "#{ENV['HOME']}/.config/nvim/init.vim" do
   to "#{ENV['HOME']}/.vimrc"
   force true
 end
+
+link "#{ENV['HOME']}/dotfiles/config/.vim/coc-settings.json" do
+  to "#{ENV['HOME']}/.config/nvim/coc-settings.json"
+  force true
+end

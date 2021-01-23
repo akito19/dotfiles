@@ -11,8 +11,16 @@ repo = 'Shougo/vimproc.vim'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 
+# LSP
+# https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
 [[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
+repo = 'neoclide/coc.nvim'
+merged = '0'
+rev = 'release'
+build = 'yarn install --frozen-lockfile'
+
+[[plugins]]
+repo = 'kevinoid/vim-jsonc'
 
 # ruby, rails
 [[plugins]]
