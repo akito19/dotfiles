@@ -80,8 +80,8 @@ au BufRead,BufNewFile *.hs                  set filetype=haskell
 au BufRead,BufNewFile *.yml,*.yaml,*.dig    set filetype=yaml
 
 " Split editor
-nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
-nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>>
+nnoremap <C-l> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap <C-h> :split<CR> :exe("tjump ".expand('<cword>'))<CR>>
 
 " quickrun.vim
 set splitbelow
@@ -154,6 +154,9 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gh :sp<CR><Plug>(coc-definition)
+nmap <silent> gl :vsp<CR><Plug>(coc-definition)
+nmap <silent> gt :vsp<CR><Plug>(coc-definition)<C-W>T
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -338,9 +341,13 @@ function! LightlineReadonly()
 endfunction
 
 function! LightlineFilename()
-  let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
   let modified = &modified ? ' +' : ''
-  return filename . modified
+  return expand('%') . modified
 endfunction
 
 function! LightlineFileformat()
