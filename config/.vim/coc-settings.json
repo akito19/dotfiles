@@ -21,5 +21,18 @@
       "filetypes": ["rust"],
       "rootPatterns": ["Cargo.toml"]
     }
+  },
+  "elmLS": {
+    "command": "node_modules/.bin/elm-language-server",
+    "args": ["--stdio"],
+    "filetypes": ["elm"],
+    "rootPatterns": ["elm.json"],
+    "initializationOptions": {
+      "runtime": "node",
+      "elmPath": "node_modules/.bin/elm",
+      "elmFormatPath": "node_modules/.bin/elm-format",
+      "elmTestPath": "node_modules/.bin/elm-test"
+    }
   }
 }
+

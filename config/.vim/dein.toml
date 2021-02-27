@@ -110,6 +110,10 @@ on_ft = 'haml'
 repo = 'posva/vim-vue'
 on_ft = 'vue'
 
+[[plugins]]
+repo = 'ElmCast/elm-vim'
+on_ft = 'elm'
+
 # Text
 [[plugins]]
 repo = 'tpope/vim-markdown'

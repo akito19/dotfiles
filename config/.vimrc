@@ -77,6 +77,7 @@ au BufRead,BufNewFile *.php                 set filetype=php
 au BufRead,BufNewFile *.rs                  set filetype=rust
 au BufRead,BufNewFile *.c,*.cu              set filetype=c
 au BufRead,BufNewFile *.hs                  set filetype=haskell
+au BufRead,BufNewFile *.elm                 set filetype=elm
 au BufRead,BufNewFile *.yml,*.yaml,*.dig    set filetype=yaml
 
 " Split editor
