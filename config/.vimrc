@@ -384,7 +384,6 @@ endif
 " For NeoVim
 if has('nvim')
   " change cursor in defferent modes
-  let g:deoplete#enable_at_startup = 1
   let g:ruby_host_prog = '$HOME/.rbenv/shims/ruby'
   " for Mac
   if has('mac')

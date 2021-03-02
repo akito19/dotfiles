@@ -16,8 +16,3 @@ hook_add = '''
   nnoremap <leader>f :Denite -buffer-name=gtags_file gtags_file<cr>
   nnoremap <leader>p :Denite -buffer-name=gtags_path gtags_path<cr>
 '''
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-if = 'has("nvim")'
-on_i = 1
