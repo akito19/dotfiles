@@ -44,7 +44,6 @@
   root = ~/ghq
   root = ~/go/src
 [init]
-	templateDir = /Users/akito/.git-templates/git-secrets
 	defaultBranch = main
 [secrets]
 	providers = git secrets --aws-provider
