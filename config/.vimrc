@@ -57,7 +57,6 @@ set visualbell t_bl=
 set noerrorbells
 
 " 表示設定
-set number
 set title
 set showmatch
 set autoindent
