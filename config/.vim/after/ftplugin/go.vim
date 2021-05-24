@@ -8,4 +8,4 @@ let g:go_highlight_structs = 1
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 0
 let g:go_version_warning = 0
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['go']
