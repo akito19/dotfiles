@@ -1,10 +1,10 @@
 node.reverse_merge!(
   rbenv: {
     user: 'akito',
-    global: '3.0.0',
+    global: '3.0.2',
     versions: %w[
-      3.0.0
-      2.6.4
+      3.0.2
+      2.7.4
     ],
   }
 )
