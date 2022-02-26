@@ -68,17 +68,17 @@ set ambiwidth=double
 set laststatus=2
 
 " File type
-au BufRead,BufNewFile *.rb,*.jb,*.rbi,*.rbs set filetype=ruby
-au BufRead,BufNewFile *.go                  set filetype=go
-au BufRead,BufNewFile *.ex,*.exs,*.eex      set filetype=elixir
-au BufRead,BufNewFile *.py                  set filetype=python
-au BufRead,BufNewFile *.php                 set filetype=php
-au BufRead,BufNewFile *.rs                  set filetype=rust
-au BufRead,BufNewFile *.c,*.cu,*.h          set filetype=c
-au BufRead,BufNewFile *.cc,*.cpp,*.hh,*.hpp set filetype=cpp
-au BufRead,BufNewFile *.hs                  set filetype=haskell
-au BufRead,BufNewFile *.elm                 set filetype=elm
-au BufRead,BufNewFile *.yml,*.yaml,*.dig    set filetype=yaml
+au BufRead,BufNewFile *.rb,*.jb,*.rbi,*.rbs     set filetype=ruby
+au BufRead,BufNewFile *.go                      set filetype=go
+au BufRead,BufNewFile *.ex,*.exs,*.eex          set filetype=elixir
+au BufRead,BufNewFile *.py                      set filetype=python
+au BufRead,BufNewFile *.php                     set filetype=php
+au BufRead,BufNewFile *.rs                      set filetype=rust
+au BufRead,BufNewFile *.c,*.cu,*.h              set filetype=c
+au BufRead,BufNewFile *.cc,*.cpp,*.hh,*.hpp,*cl set filetype=cpp
+au BufRead,BufNewFile *.hs                      set filetype=haskell
+au BufRead,BufNewFile *.elm                     set filetype=elm
+au BufRead,BufNewFile *.yml,*.yaml,*.dig        set filetype=yaml
 
 " Split editor
 nnoremap <C-l> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
