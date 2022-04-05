@@ -25,6 +25,7 @@ export DATABASEDOTCOM_VERIFY_MODE=OpenSSL::SSL::VERIFY_NONE
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # PostgreSQL configuration
+export PATH="/usr/local/opt/postgresql@14/bin:$PATH"
 export PGDATA=/usr/local/var/postgres
 
 # https://github.com/puma/puma/issues/1421
