@@ -115,8 +115,8 @@ export RUST_PATH=$HOME/.cargo/bin
 export PATH=$HOME/$RUST_PATH:$PATH
 
 # Golang
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOPATH/bin
 
 # Python
 export PYENV_ROOT=$HOME/.pyenv
