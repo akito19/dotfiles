@@ -1,3 +1,0 @@
-[submodule "plugins/itamae-plugin-recipe-rbenv"]
-	path = plugins/itamae-plugin-recipe-rbenv
-	url = git@github.com:k0kubun/itamae-plugin-recipe-rbenv.git
