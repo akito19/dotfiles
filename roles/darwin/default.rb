@@ -10,6 +10,10 @@ end
 #   include_cookbook 'golang'
 # end
 
+if ask 'install Node.js'
+  include_cookbook 'nodejs'
+end
+
 if ask 'install Python'
   include_cookbook 'python'
 end
