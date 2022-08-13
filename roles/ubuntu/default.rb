@@ -2,6 +2,11 @@ include_cookbook 'symboliclinks'
 include_cookbook 'git'
 include_cookbook 'vim'
 
+directory "#{ENV['HOME']}/src/github.com" do
+  action :create
+  not_if "test -d #{ENV['HOME']}/src/github.com"
+end
+
 if ask 'install Ruby'
   include_cookbook 'ruby'
 end

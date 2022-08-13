@@ -36,6 +36,8 @@
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
+[ghq]
+  root = ~/src
 [diff]
   compactionHeuristic = true
 [pull]
