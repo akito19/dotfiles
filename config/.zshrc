@@ -16,30 +16,25 @@ umask 022
 plugins=(git ruby gem osx bundler brew rails)
 
 #
-# Plugins -zplug-
+# Plugins zinit
 #
 
-if [[ ! -d $HOME/.zplug ]]; then
-  git clone https://github.com/zplug/zplug $HOME/.zplug
-  source $HOME/.zplug/init.zsh && zplug update --self
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+if [[ ! -d $ZINIT_HOME ]]; then
+  mkdir -p "$(dirname $ZINIT_HOME)"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-source $HOME/.zplug/init.zsh
+source "${ZINIT_HOME}/zinit.zsh"
+
 
 # write "user_name/repository"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-completions"
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-history-substring-search
+zinit light zsh-users/zsh-completions
 
-# install
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-zplug load
+autoload -Uz compinit
+compinit
 
 #
 # Prompt
@@ -115,8 +110,9 @@ export RUST_PATH=$HOME/.cargo/bin
 export PATH=$HOME/$RUST_PATH:$PATH
 
 # Golang
-export GOPATH=$HOME/go
+export GOPATH=$HOME/src
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
 
 # Python
 export PYENV_ROOT=$HOME/.pyenv
@@ -151,3 +147,4 @@ case $OSTYPE in
     ;;
 esac
 eval "$(pyenv init -)"
+eval "$(/opt/homebrew/bin/brew shellenv)"

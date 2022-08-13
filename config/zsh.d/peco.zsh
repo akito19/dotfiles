@@ -28,7 +28,7 @@ bindkey '^]' peco-src
 function peco-hub() {
   local selected_repo=$(ghq list -p | peco --query "$LBUFFER" | rev | cut -d "/" -f -2 | rev)
   if [ -n "$selected_repo" ]; then
-    BUFFER="hub browse ${selected_repo}"
+    BUFFER="gh repo view ${selected_repo} --web"
     zle accept-line
   fi
   zle clear-screen

@@ -17,7 +17,7 @@ fi
 
 # aliases for MacOS X
 alias v='nvim'
-alias ctags="`brew --prefix`/bin/ctags"
+#alias ctags="`brew --prefix`/bin/ctags"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
@@ -31,7 +31,7 @@ export PGDATA=/usr/local/var/postgres
 # https://github.com/puma/puma/issues/1421
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-# MySQL 5.7:w
+# MySQL 5.7
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # nokogiri gem
@@ -53,4 +53,5 @@ export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/opt/node@10/bin:$PATH"
 
 # OpenSSL
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+# export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+export LIBRARY_PATH="/opt/homebrew/opt/openssl@3:$LIBRARY_PATH"
