@@ -1,10 +1,11 @@
 include_cookbook 'symboliclinks'
 include_cookbook 'git'
-include_cookbook 'vim'
+include_cookbook 'zsh'
 
 directory "#{ENV['HOME']}/src/github.com" do
   action :create
-  not_if "test -d #{ENV['HOME']}/src/github.com"
+  user ENV['USER']
+  # not_if "test -d #{ENV['HOME']}/src/github.com"
 end
 
 if ask 'install Ruby'
@@ -23,8 +24,5 @@ if ask 'install Rust'
   include_cookbook 'rust'
 end
 
+include_cookbook 'vim'
 ln '.bash_profile'
-ln '.latexmkrc'
-
-# include_cookbook 'tmux'
-# include_cookbook 'zsh'

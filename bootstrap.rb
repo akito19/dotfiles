@@ -10,7 +10,7 @@ MItamae::RecipeContext.class_eval do
   end
 
   def ask(params)
-    puts "Do you #{params}? [y/N]"
+    puts "[Platform: #{node[:platform]}] Do you #{params}? [y/N]"
     loop do
       answer = gets.chomp.to_s
       case answer

@@ -1,22 +1,23 @@
 path = "/usr/local"
 go_arm64 = "go1.19.darwin-arm64.tar.gz"
-go_amd64 = "go1.19.linux_amd64.tar.gz"
-
-directory "/usr/local/go" do
-  action :create
-  not_if "test -d /usr/local/go"
-end
+go_amd64 = "go1.19.3.linux-amd64.tar.gz"
 
 case node[:platform]
 when 'darwin'
   package 'gh'
+
+  directory "/usr/local/go" do
+    action :create
+    not_if "test -d /usr/local/go"
+  end
+
   # TODO: Consider fixsing idea because Apple doesn't allow to create directory to /usr/local without sudo
   # execute "Download Go" do
   #   run_command "curl -sO https://go.dev/dl/#{go_arm64} | tar -xzf #{go_arm64} -C #{path}"
   # end
 when 'ubuntu'
   execute "Download Go" do
-    run_command "curl -sO https://go.dev/dl/#{go_amd64} | tar -xzf #{go_amd64} -C #{path}"
+    run_command "wget https://go.dev/dl/#{go_amd64} | tar -xzf #{go_amd64} -C #{path}"
   end
 when 'arch'
   package 'go'
