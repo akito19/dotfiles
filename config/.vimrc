@@ -112,7 +112,7 @@ nnoremap <C-[> <C-t>
 " https://langserver.org/
 " variables: https://github.com/neoclide/coc.nvim/blob/release/data/schema.json
 set hidden
-set pumblend=10
+" set pumblend=10
 " Some servers have issues with backup files
 set nobackup
 set nowritebackup

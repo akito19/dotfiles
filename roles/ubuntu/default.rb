@@ -24,5 +24,9 @@ if ask 'install Rust'
   include_cookbook 'rust'
 end
 
+if ask 'download NodeJS'
+  include_cookbook 'nodejs'
+end
+
 include_cookbook 'vim'
 ln '.bash_profile'

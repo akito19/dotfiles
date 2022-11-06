@@ -1,7 +1,8 @@
-if node[:platform] == 'darwin'
+case node[:platform]
+when 'darwin'
   package 'node'
+when 'ubuntu'
+  # https://github.com/nvm-sh/nvm#git-install
 else
-  # TODO
-  #   MItamae.logger.info("It hasn't set recipe...")
-  #   end
+  # nop
 end
