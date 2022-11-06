@@ -13,8 +13,6 @@ export XDG_CONFIG_HOME=$HOME/.config
 # configuration umask
 umask 022
 
-plugins=(git ruby gem osx bundler brew rails)
-
 #
 # Plugins zinit
 #
@@ -118,6 +116,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
+eval "$(pyenv init -)"
 
 # OCaml
 test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -146,5 +145,3 @@ case $OSTYPE in
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.linux ] && source $DOTFILE_ROOT/zshrc.d/zshrc.linux
     ;;
 esac
-eval "$(pyenv init -)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
