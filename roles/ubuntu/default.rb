@@ -1,4 +1,5 @@
 include_cookbook 'symboliclinks'
+include_cookbook 'tools'
 include_cookbook 'git'
 include_cookbook 'zsh'
 
@@ -8,25 +9,11 @@ directory "#{ENV['HOME']}/src/github.com" do
   # not_if "test -d #{ENV['HOME']}/src/github.com"
 end
 
-if ask 'install Ruby'
-  include_cookbook 'ruby'
-end
-
-if ask 'install Golang'
-  include_cookbook 'golang'
-end
-
-if ask 'install Python'
-  include_cookbook 'python'
-end
-
-if ask 'install Rust'
-  include_cookbook 'rust'
-end
-
-if ask 'download NodeJS'
-  include_cookbook 'nodejs'
+if ask 'install tmux'
+  include_cookbook 'tmux'
 end
 
 include_cookbook 'vim'
+
 ln '.bash_profile'
+package 'xclip'
