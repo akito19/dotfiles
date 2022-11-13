@@ -51,4 +51,7 @@ function tmux_automatically_attach_session()
     fi
   fi
 }
-tmux_automatically_attach_session
+
+if [ $OSTYPE != 'linux-gnu' ]; then
+  tmux_automatically_attach_session
+fi
