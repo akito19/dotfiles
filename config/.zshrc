@@ -41,7 +41,7 @@ compinit
 setopt prompt_subst
 autoload -Uz promptinit
 promptinit
-prompt adam1
+# prompt theme has been moved to OSTYPE condition block.
 
 #
 # http://mollifier.hatenablog.com/entry/20100906/p1
@@ -138,10 +138,12 @@ fi
 
 case $OSTYPE in
   darwin*)
+    prompt adam1
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.darwin ] && source $DOTFILE_ROOT/zshrc.d/zshrc.darwin
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.td ] && source $DOTFILE_ROOT/zshrc.d/zshrc.td
     ;;
   linux*)
+    prompt client
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.linux ] && source $DOTFILE_ROOT/zshrc.d/zshrc.linux
     ;;
 esac
