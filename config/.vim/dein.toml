@@ -8,9 +8,6 @@ repo = 'Shougo/vimproc.vim'
     linux = 'make'
     unix  = 'gmake'
 
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-
 # LSP
 # https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
 [[plugins]]
