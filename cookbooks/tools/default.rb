@@ -5,7 +5,7 @@ when 'ubuntu'
 when 'arch'
   include_cookbook 'yaourt'
   yaourt 'peco'
-when
+else
   package 'peco'
 end
 

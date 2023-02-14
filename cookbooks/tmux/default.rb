@@ -13,7 +13,7 @@ scripts = [
 ]
 scripts.each do |script|
   execute "copy bin/#{script}" do
-    command "cp #{script} /usr/local/bin"
+    command "sudo cp #{script} /usr/local/bin"
     not_if "test -e /usr/local/bin/#{script}"
   end
 end
