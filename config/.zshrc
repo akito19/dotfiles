@@ -116,7 +116,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
-eval "$(pyenv init -)"
 
 # OCaml
 test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
