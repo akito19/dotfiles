@@ -138,6 +138,8 @@ fi
 case $OSTYPE in
   darwin*)
     prompt adam1
+    export CLICOLOR=1
+    export LSCOLORS="Gxfxcxdxbxegedabagacad"
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.darwin ] && source $DOTFILE_ROOT/zshrc.d/zshrc.darwin
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.td ] && source $DOTFILE_ROOT/zshrc.d/zshrc.td
     ;;
