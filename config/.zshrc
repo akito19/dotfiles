@@ -137,7 +137,7 @@ fi
 
 case $OSTYPE in
   darwin*)
-    prompt adam1
+    prompt adam1 cyan white green
     export CLICOLOR=1
     export LSCOLORS="Gxfxcxdxbxegedabagacad"
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.darwin ] && source $DOTFILE_ROOT/zshrc.d/zshrc.darwin
