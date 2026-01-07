@@ -6,5 +6,4 @@ include_cookbook 'vim'
 ln '.bash_profile'
 ln '.xprofile'
 
-include_cookbook 'tmux'
 include_cookbook 'zsh'

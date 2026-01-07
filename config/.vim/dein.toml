@@ -131,6 +131,9 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
 
+[[plugins]]
+repo = 'EdenEast/nightfox.nvim'
+
 # others
 [[plugins]]
 repo = 'Toruiwashita/git-switcher.vim'

@@ -80,7 +80,6 @@ setopt correct
 setopt auto_list
 setopt auto_menu
 
-export GIT_EDITOR=vim
 export GIT_MERGE_AUTOEDIT=no
 
 export HISTFILE=$HOME/.zsh_history
@@ -137,7 +136,7 @@ fi
 
 case $OSTYPE in
   darwin*)
-    prompt adam1 cyan white green
+    prompt adam1 default white green
     export CLICOLOR=1
     export LSCOLORS="Gxfxcxdxbxegedabagacad"
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.darwin ] && source $DOTFILE_ROOT/zshrc.d/zshrc.darwin

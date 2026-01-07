@@ -9,10 +9,6 @@ directory "#{ENV['HOME']}/src/github.com" do
   # not_if "test -d #{ENV['HOME']}/src/github.com"
 end
 
-if ask 'install tmux'
-  include_cookbook 'tmux'
-end
-
 include_cookbook 'vim'
 
 ln '.bash_profile'
