@@ -80,7 +80,7 @@ setopt correct
 setopt auto_list
 setopt auto_menu
 
-export GIT_EDITOR=vim
+export GIT_EDITOR=nvim
 export GIT_MERGE_AUTOEDIT=no
 
 export HISTFILE=$HOME/.zsh_history

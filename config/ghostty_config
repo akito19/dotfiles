@@ -1,0 +1,26 @@
+# Appearnces
+# theme = Night Owl / Iceberg Dark
+# theme = Monokai Pro Machine
+theme = Night Owl
+font-family = "Menlo Regular"
+font-size = 13
+background-opacity = 0.95
+
+# Window
+window-save-state = always
+
+# Shell
+shell-integration = zsh
+
+# Keybinds
+keybind = cmd+t=new_tab
+keybind = ctrl+t>v=new_split:right
+keybind = ctrl+t>h=new_split:down
+
+# Panes
+keybind = ctrl+t>h=goto_split:left
+keybind = ctrl+t>l=goto_split:right
+keybind = ctrl+t>k=goto_split:top
+keybind = ctrl+t>j=goto_split:bottom
+
+keybind = ctrl+t>w=close_surface

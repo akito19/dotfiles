@@ -2,6 +2,7 @@ include_cookbook 'symboliclinks'
 include_cookbook 'tools'
 include_cookbook 'git'
 include_cookbook 'vim'
+include_cookbook 'ghostty'
 
 directory "#{ENV['HOME']}/src/github.com" do
   action :create
