@@ -43,7 +43,7 @@ filetype plugin indent on
 
 " Color
 syntax enable
-colorscheme iceberg
+colorscheme nightfox
 
 " 基本設定
 set noswapfile
