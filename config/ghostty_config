@@ -1,8 +1,7 @@
 # Appearnces
-# theme = Night Owl / Iceberg Dark
-# theme = Monokai Pro Machine
+# theme = Night Owl / Espresso
 theme = Night Owl
-font-family = "Menlo Regular"
+font-family = Monaco
 font-size = 13
 background-opacity = 0.95
 
