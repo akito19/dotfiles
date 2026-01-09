@@ -14,47 +14,24 @@ when 'arch'
   package 'neovim'
 end
 
+# Legacy Vim configuration (kept for backward compatibility)
 ln '.vim'
 ln '.vimrc'
 
-# http://qiita.com/okamos/items/2259d5c770d51b88d75b
-directory "#{ENV['HOME']}/.config/nvim" do
-  action :create
-  not_if "test -d #{ENV['HOME']}/.config/nvim"
+# Neovim configuration with lazy.nvim
+# Remove old symlinks if they exist
+execute "rm -rf #{ENV['HOME']}/.config/nvim" do
+  only_if "test -L #{ENV['HOME']}/.config/nvim || test -d #{ENV['HOME']}/.config/nvim"
 end
 
+# Create ~/.config directory if it doesn't exist
+directory "#{ENV['HOME']}/.config" do
+  action :create
+  not_if "test -d #{ENV['HOME']}/.config"
+end
+
+# Link the new nvim configuration
 link "#{ENV['HOME']}/.config/nvim" do
-  to "#{ENV['HOME']}/.vim"
-  force true
-end
-
-# https://neovim.io/doc/user/filetype.html
-directory "#{ENV['HOME']}/.config/nvim/after" do
-  action :create
-  not_if "test -d #{ENV['HOME']}/.config/nvim/after"
-end
-
-link "#{ENV['HOME']}/.config/nvim/after/ftplugin" do
-  to "#{ENV['HOME']}/.vim/after/ftplugin"
-  force true
-end
-
-link "#{ENV['HOME']}/.config/nvim/colors" do
-  to "#{ENV['HOME']}/.vim/colors"
-  force true
-end
-
-link "#{ENV['HOME']}/.config/nvim/plugins" do
-  to "#{ENV['HOME']}/.vim/plugins"
-  force true
-end
-
-link "#{ENV['HOME']}/.config/nvim/init.vim" do
-  to "#{ENV['HOME']}/.vimrc"
-  force true
-end
-
-link "#{ENV['HOME']}/.config/nvim/coc-settings.json" do
-  to "#{ENV['HOME']}/dotfiles/config/.vim/coc-settings.json"
+  to File.expand_path('../../../config/nvim', __FILE__)
   force true
 end
