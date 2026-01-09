@@ -153,7 +153,6 @@ config/nvim/
 
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git サイン表示
 - [vim-fugitive](https://github.com/tpope/vim-fugitive) - Git 操作
-- [git-switcher.vim](https://github.com/Toruiwashita/git-switcher.vim) - ブランチ切り替え
 
 ### エディタ機能
 
@@ -167,7 +166,7 @@ config/nvim/
 ### シンタックス / 言語サポート
 
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - シンタックスハイライト
-- 各言語用プラグイン (vim-ruby, vim-rails, vim-go, rust.vim など)
+- 各言語用プラグイン (vim-ruby, vim-rails, rust.vim など)
 
 ### カラースキーム
 
@@ -182,13 +181,11 @@ Mason でインストールされる LSP サーバー:
 |----------|------|
 | lua_ls | Lua |
 | pyright | Python |
-| gopls | Go |
 | rust_analyzer | Rust |
 | ts_ls | TypeScript / JavaScript |
 | clangd | C / C++ |
 | solargraph | Ruby |
 | elixirls | Elixir |
-| hls | Haskell |
 | dockerls | Dockerfile |
 
 ## コマンド

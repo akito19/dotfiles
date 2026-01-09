@@ -27,13 +27,11 @@ return {
       ensure_installed = {
         "lua_ls",
         "pyright",
-        "gopls",
         "rust_analyzer",
         "ts_ls",
         "clangd",
         "solargraph",
         "elixirls",
-        "hls",
         "dockerls",
       },
       automatic_installation = true,
@@ -76,16 +74,6 @@ return {
         capabilities = capabilities,
       })
 
-      vim.lsp.config("gopls", {
-        capabilities = capabilities,
-        settings = {
-          gopls = {
-            analyses = { unusedparams = true },
-            staticcheck = true,
-          },
-        },
-      })
-
       vim.lsp.config("rust_analyzer", {
         capabilities = capabilities,
         settings = {
@@ -118,11 +106,6 @@ return {
         capabilities = capabilities,
       })
 
-      vim.lsp.config("hls", {
-        capabilities = capabilities,
-        filetypes = { "haskell", "lhaskell" },
-      })
-
       vim.lsp.config("dockerls", {
         capabilities = capabilities,
       })
@@ -135,13 +118,11 @@ return {
       vim.lsp.enable({
         "lua_ls",
         "pyright",
-        "gopls",
         "rust_analyzer",
         "ts_ls",
         "clangd",
         "solargraph",
         "elixirls",
-        "hls",
         "dockerls",
         "elmls",
       })
