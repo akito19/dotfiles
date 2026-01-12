@@ -14,7 +14,7 @@ shell-integration = zsh
 # Keybinds
 keybind = cmd+t=new_tab
 keybind = ctrl+t>v=new_split:right
-keybind = ctrl+t>h=new_split:down
+keybind = ctrl+t>-=new_split:down
 
 # Panes
 split-divider-color = f19072
