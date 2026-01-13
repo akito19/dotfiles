@@ -10,4 +10,5 @@ else
 end
 
 ln '.peco'
+package 'ghq'
 package 'ripgrep'
