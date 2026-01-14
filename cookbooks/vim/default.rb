@@ -14,8 +14,7 @@ when 'arch'
   package 'neovim'
 end
 
-# Legacy Vim configuration (kept for backward compatibility)
-ln '.vim'
+# .vimrc for minimal Vim usage (git commit, etc.)
 ln '.vimrc'
 
 # Neovim configuration with lazy.nvim
