@@ -30,6 +30,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-history-substring-search
 zinit light zsh-users/zsh-completions
+zinit light rkh/zsh-jj
 
 autoload -Uz compinit
 compinit
@@ -50,11 +51,9 @@ promptinit
 
 autoload -Uz add-zsh-hook vcs_info
 
-zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' enable git svn jj
 zstyle ':vcs_info:*' formats '(%s)-[%b]'
 zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
-zstyle ':vcs_info:(svn|bzr):*' branchformat '%b:r%r'
-zstyle ':vcs_info:bzr:*' use-simple true
 
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "+"
