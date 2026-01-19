@@ -52,22 +52,34 @@ promptinit
 autoload -Uz add-zsh-hook vcs_info
 
 zstyle ':vcs_info:*' enable git svn jj
-zstyle ':vcs_info:*' formats '(%s)-[%b]'
-zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+zstyle ':vcs_info:*' formats '[%s:%b]'
+zstyle ':vcs_info:*' actionformats '[%s:%b|%a]'
 
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "+"
 zstyle ':vcs_info:git:*' unstagedstr "-"
-zstyle ':vcs_info:git:*' formats '(%s)-[%b] %c%u'
-zstyle ':vcs_info:git:*' actionformats '(%s)-[%b|%a] %c%u'
+zstyle ':vcs_info:git:*' formats '[%s:%b (%c%u)]'
+zstyle ':vcs_info:git:*' actionformats '[%s:%b|%a (%c%u)]'
 
 function _update_vcs_info_msg() {
     psvar=()
     LANG=en_US.UTF-8 vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+    local msg="${vcs_info_msg_0_}"
+    msg="${msg// \(\)/}"  # 空の () を除去
+    [[ -n "$msg" ]] && psvar[1]="$msg"
 }
 add-zsh-hook precmd _update_vcs_info_msg
-RPROMPT="%1(v|%F{green}%1v%f|)"
+
+function _update_prompt() {
+    local depth=${#${(s:/:)${(%):-%~}}}
+    if (( depth >= 4 )); then
+        PROMPT='%n@%m:%F{cyan}%~%f %1(v|%F{yellow}%1v%f|)
+%(!.#.%%) '
+    else
+        PROMPT='%n@%m:%F{cyan}%~%f %1(v|%F{yellow}%1v%f|) %(!.#.%%) '
+    fi
+}
+add-zsh-hook precmd _update_prompt
 
 #
 # General Configuration
@@ -135,14 +147,14 @@ fi
 
 case $OSTYPE in
   darwin*)
-    prompt adam1 default white green
+    PROMPT='%n@%m:%F{cyan}%~%f %1(v|%F{yellow}%1v%f|) %(!.#.%%) '
     export CLICOLOR=1
     export LSCOLORS="Gxfxcxdxbxegedabagacad"
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.darwin ] && source $DOTFILE_ROOT/zshrc.d/zshrc.darwin
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.td ] && source $DOTFILE_ROOT/zshrc.d/zshrc.td
     ;;
   linux*)
-    prompt adam1 red white cyan
+    PROMPT='%n@%m:%F{cyan}%~%f %1(v|%F{yellow}%1v%f|) %(!.#.%%) '
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.linux ] && source $DOTFILE_ROOT/zshrc.d/zshrc.linux
     ;;
 esac
