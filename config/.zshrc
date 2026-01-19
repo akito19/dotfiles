@@ -72,11 +72,21 @@ add-zsh-hook precmd _update_vcs_info_msg
 
 function _update_prompt() {
     local depth=${#${(s:/:)${(%):-%~}}}
+    local user_host
+    case $OSTYPE in
+      linux*)
+        user_host='%K{red}%F{white}%n@%m%f%k'
+        ;;
+      *)
+        user_host='%n@%m'
+        ;;
+    esac
+
     if (( depth >= 4 )); then
-        PROMPT='%n@%m:%F{cyan}%~%f%1(v| %F{yellow}%1v%f|)
-%(!.#.%%) '
+        PROMPT="${user_host}:%F{cyan}%~%f%1(v| %F{yellow}%1v%f|)
+%(!.#.%%) "
     else
-        PROMPT='%n@%m:%F{cyan}%~%f%1(v| %F{yellow}%1v%f|) %(!.#.%%) '
+        PROMPT="${user_host}:%F{cyan}%~%f%1(v| %F{yellow}%1v%f|) %(!.#.%%) "
     fi
 }
 add-zsh-hook precmd _update_prompt
@@ -147,14 +157,12 @@ fi
 
 case $OSTYPE in
   darwin*)
-    PROMPT='%n@%m:%F{cyan}%~%f%1(v| %F{yellow}%1v%f|) %(!.#.%%) '
     export CLICOLOR=1
     export LSCOLORS="Gxfxcxdxbxegedabagacad"
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.darwin ] && source $DOTFILE_ROOT/zshrc.d/zshrc.darwin
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.td ] && source $DOTFILE_ROOT/zshrc.d/zshrc.td
     ;;
   linux*)
-    PROMPT='%K{red}%F{white}%n@%m%f%k:%F{cyan}%~%f%1(v| %F{yellow}%1v%f|) %(!.#.%%) '
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.linux ] && source $DOTFILE_ROOT/zshrc.d/zshrc.linux
     ;;
 esac
