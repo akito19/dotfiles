@@ -22,7 +22,6 @@ alias v='nvim'
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 export DATABASEDOTCOM_VERIFY_MODE=OpenSSL::SSL::VERIFY_NONE
-export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # PostgreSQL configuration
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
@@ -43,9 +42,6 @@ export PATH="$HOME/.embulk/bin:$PATH"
 
 # Digdag
 export PATH="$HOME/bin:$PATH"
-
-# Workaround for node 12 install breakings (2019-06-02)
-export PATH="/usr/local/opt/node@10/bin:$PATH"
 
 # OpenSSL
 # export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
