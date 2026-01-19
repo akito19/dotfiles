@@ -154,7 +154,7 @@ case $OSTYPE in
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.td ] && source $DOTFILE_ROOT/zshrc.d/zshrc.td
     ;;
   linux*)
-    PROMPT='%n@%m:%F{cyan}%~%f%1(v| %F{yellow}%1v%f|) %(!.#.%%) '
+    PROMPT='%K{red}%F{white}%n@%m%f%k:%F{cyan}%~%f%1(v| %F{yellow}%1v%f|) %(!.#.%%) '
     [ -f $DOTFILE_ROOT/zshrc.d/zshrc.linux ] && source $DOTFILE_ROOT/zshrc.d/zshrc.linux
     ;;
 esac
