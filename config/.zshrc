@@ -84,7 +84,7 @@ function _update_prompt() {
 
     if (( depth >= 4 )); then
         PROMPT="${user_host}:%F{cyan}%~%f%1(v| %F{yellow}%1v%f|)
-%(!.#.%%) "
+ %(!.#.%%) "
     else
         PROMPT="${user_host}:%F{cyan}%~%f%1(v| %F{yellow}%1v%f|) %(!.#.%%) "
     fi
