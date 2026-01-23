@@ -174,3 +174,7 @@ esac
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# zj
+eval "$(zj init zsh)"
+export ZJ_CD_OVERRIDE=1
