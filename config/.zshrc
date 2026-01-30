@@ -176,5 +176,5 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # zj
-eval "$(zj init zsh)"
-export ZJ_CD_OVERRIDE=1
+eval "$(fj init zsh)"
+export FJ_CD_OVERRIDE=1
