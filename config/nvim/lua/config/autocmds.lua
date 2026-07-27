@@ -8,7 +8,7 @@ local autocmd = vim.api.nvim_create_autocmd
 augroup("FileTypeDetection", { clear = true })
 autocmd({ "BufRead", "BufNewFile" }, {
   group = "FileTypeDetection",
-  pattern = { "*.rb", "*.jb", "*.rbi", "*.rbs" },
+  pattern = { "*.rb", "*.jb", "*.rbi", "*.rbs", "Fastfile" },
   callback = function()
     vim.bo.filetype = "ruby"
   end,
