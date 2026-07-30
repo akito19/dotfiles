@@ -116,9 +116,10 @@ typeset -U path PATH
 #
 
 # Ruby
+FPATH=~/.rbenv/completions:"$FPATH"
 export RBENV_ROOT=$HOME/.rbenv
 export PATH=$RBENV_ROOT/bin:$PATH
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 # Rust
 if [ -d $HOME/.cargo ]; then
