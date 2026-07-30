@@ -178,3 +178,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # zj
 eval "$(fj init zsh)"
 export FJ_CD_OVERRIDE=1
+export LANG=en_US.UTF-8
