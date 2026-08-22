@@ -176,6 +176,9 @@ esac
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# mise (must come after nvm / bun PATH exports above)
+eval "$(mise activate zsh)"
+
 # zj
 eval "$(fj init zsh)"
 export FJ_CD_OVERRIDE=1

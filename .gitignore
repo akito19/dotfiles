@@ -35,3 +35,5 @@ dump.rdb
 
 # Work
 config/zshrc.d/zshrc.td
+
+**/.claude/settings.local.json

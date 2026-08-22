@@ -5,7 +5,7 @@
 return {
   {
     "akito19/mdview.nvim",
-    -- dir = "~/src/github.com/akito19/mdview.nvim",
+    -- "~/src/github.com/akito19/mdview.nvim",
     cmd = { "MdView", "MdViewClose", "MdViewToggle" },
     ft = "markdown",
     opts = {},
